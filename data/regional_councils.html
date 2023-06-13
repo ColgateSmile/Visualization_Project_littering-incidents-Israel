@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Regional Councils in Israel sortable by English and Hebrew names and District.">
+<title>List of Regional Councils in Israel</title>
+<style>
+@font-face {font-family: Assistant; font-style: normal; font-weight: 400; src: local(''),
+url('/fonts/assistant-v8-latin_hebrew-regular.woff2') format('woff2'), url('/fonts/assistant-v8-latin_hebrew-regular.woff') format('woff');}
+@font-face {font-family: Assistant; font-style: normal; font-weight: 500; src: local(''), url('/fonts/assistant-v8-latin_hebrew-500.woff2') format('woff2')}
+
+body {background-color: #e2edf8; font-family: Assistant; margin: auto; max-width: 1024px;}
+a {text-decoration: none;}
+header {background-color: #04a; border-bottom: 1px solid #1a237e; }
+.logo {float: left; margin-top: 7px; text-align: center;}
+h1,h2,h3,h4 {font-weight: 500;}
+h1 {display: inline-block; color: #eff3ff; font-size: 1.1em; }
+h2 {background-color: #eff3ff; color: #044a84; font-size: 1.1em; margin: 0; padding: 12px 30px 12px 30px;}
+h3 {color: #3a2; margin: 8px 0 8px 0;}
+h4 {color: #6a5; margin: 12px 0 8px 0;}
+
+/* nav */
+header button {background-color: #eff3ff; border: 1px; margin: 18px 4px 0 0; padding: 2px 4px; float: right;}
+header button:hover {background: #bdf;}
+.bar1, .bar2, .bar3 {background-color: #04a; margin: 4px 0; transition: 0.16s; width: 20px; height: 2px;}
+.change .bar1 {transform: translateY(6px) rotate(-45deg);}
+.change .bar2 {opacity: 0;}
+.change .bar3 {transform: translateY(-6px) rotate(45deg);}
+.menu {background: #eff3ff; padding: 0; width: 180px;}
+.menu li {list-style-type: none; font-size: 14px; line-height: 1.5em;}
+.menu li:hover {background-color: #09c;}
+.menu p {background: #bdf; color: #048; margin: 0; padding: 4px; text-align: center;}
+.menu a {background: #fff; color: #36f; border-left: solid #eff3ff 5px; display: block; margin: 2px; padding: 3px 0 3px 12px;}
+.menu a:hover {background: #ffe000; color: #00f; border-left: solid #0c0 5px;}
+
+main {background-color: #fff; padding-bottom: 10px; border: 1px solid #c4dbe7;}
+.content ul {padding-left: 30px;}
+.content li {margin-bottom: 9px;}
+
+em {color: orangered;}
+figure {font-size: 0.9em; margin: 10px;}
+img {max-width: 100%; height: auto;}
+.imglft {float: left; padding: 0 16px 0 0;}
+.imgrt {float: right; padding: 0 0 0 16px;}
+.note {clear: left;}
+hr {clear: left; height: 1px;}
+.block8 {margin: 10px 12px 0 25px;}
+.ctr {text-align: center;}
+
+.date {width: 90px;}
+table {border: 1px solid #ddd; font-size: 0.9em; margin-bottom: 30px;}
+caption {color: #0F9D58; font-size: 1.1em; font-weight: 500; padding-bottom: 10px;}
+th {background-color: #d9edf7; color: #bd924a; border-bottom: 2px solid #36d; vertical-align: top;}
+td {padding: 6px 3px 6px 3px; vertical-align: top;}
+
+table[data-sortable] th[data-sorted="true"] {background-image: linear-gradient(#c5e2f6 0%, #80c1f0 50%, #b8e7f5 100%); background-color: #D9EDF7;}
+table[data-sortable] th:not([data-sortable="false"]) {user-select: none; cursor: pointer;}
+table[data-sortable] th:after {content: ""; visibility: hidden; display: inline-block; border-width: 5px; border-style: solid; border-color: transparent; margin: 0 1px 0 10px; float: right;}
+table[data-sortable] th[data-sorted="true"] {background-image: linear-gradient(#c5e2f6 0%, #80c1f0 50%, #b8e7f5 100%);}
+table[data-sortable] th[data-sorted="true"]:after {visibility: visible;}
+table[data-sortable] th[data-sorted-direction="ascending"]:after {border-bottom-color: inherit; margin-top: 3px;}
+table[data-sortable] th[data-sorted-direction="descending"]:after {border-top-color: inherit; margin-top: 8px;}
+table[data-sortable] tbody > tr:nth-child(even) > td {background-color: #edfafc;}
+
+footer {background-color: #049; border: 1px solid #999; color: #fff; text-align: center;}
+footer a:link {color: lightcyan;}
+footer a:visited {color: lightgreen;}
+.menufooter a {border: 1px solid #5ab6ff; display: inline-block; width: 60px;}
+.menufooter a:hover {background: #ffd3d6; border: 1px solid #ff9a9c; color: #333;}
+
+/* Mobile */
+@media only screen and (max-width: 768px)
+{
+.logo {width: 100px;}
+h1 {width: 230px; margin: 6px 0 7px 0;}
+h2 {text-align: center;}
+.menu {margin: 0 0 0 110px; height: 0; overflow: hidden;}
+.content {margin: 10px 8px 30px 12px;}
+caption {text-align: center;}
+.adslot_l, .adslot_v, .R200 {display: none;}
+}
+
+/* Desktop */
+@media only screen and (min-width: 769px)
+{
+header {grid-area: header;}
+.menu {grid-area: navigation;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+.container {
+display: grid;
+grid-template-columns: 200px 1fr;
+grid-template-areas: 
+ "header header"
+ "navigation main"
+ ". footer";}
+
+.logo {width: 200px;}
+h1 {font-size: 1.2em; margin: 16px 0 0 30px;}
+header button {display: none;}
+.menu {margin: 20px 0 0 10px; height: auto;}
+.menu p {margin-top: 8px;}
+.content {margin: 10px 30px 30px 30px;}
+.adslot_l {display:inline-block; margin: 10px 0 0 22px; width: 160px; height: 600px;}
+.adslot_v {float: right; display:inline-block; margin: 40px 0 0 20px; width: 160px; height: 610px;}
+.R200 {float: right; display:inline-block; margin: 40px 0 0 20px; width:200px; height:200px;}
+}
+</style>
+<script>
+function menuTgl(btn) {btn.classList.toggle("change");
+if (document.getElementById("menu").style.height !== "auto"){document.getElementById("menu").style.height = "auto";}
+else {document.getElementById("menu").style.height = "0";}}
+</script>
+<script>
+(function(){var a,b,c,d,e,f,g;a="table[data-sortable]",d=/^-?[£$¤]?[\d,.]+%?$/,g=/^\s+|\s+$/g,c=["click"],f="ontouchstart"in document.documentElement,f&&c.push("touchstart"),b=function(a,b,c){return null!=a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent("on"+b,c)},e={init:function(b){var c,d,f,g,h;for(null==b&&(b={}),null==b.selector&&(b.selector=a),d=document.querySelectorAll(b.selector),h=[],f=0,g=d.length;g>f;f++)c=d[f],h.push(e.initTable(c));return h},initTable:function(a){var b,c,d,f,g,h;if(1===(null!=(h=a.tHead)?h.rows.length:void 0)&&"true"!==a.getAttribute("data-sortable-initialized")){for(a.setAttribute("data-sortable-initialized","true"),d=a.querySelectorAll("th"),b=f=0,g=d.length;g>f;b=++f)c=d[b],"false"!==c.getAttribute("data-sortable")&&e.setupClickableTH(a,c,b);return a}},setupClickableTH:function(a,d,f){var g,h,i,j,k,l;for(i=e.getColumnType(a,f),h=function(b){var c,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D;if(b.handled===!0)return!1;for(b.handled=!0,m="true"===this.getAttribute("data-sorted"),n=this.getAttribute("data-sorted-direction"),h=m?"ascending"===n?"descending":"ascending":i.defaultSortDirection,p=this.parentNode.querySelectorAll("th"),s=0,w=p.length;w>s;s++)d=p[s],d.setAttribute("data-sorted","false"),d.removeAttribute("data-sorted-direction");if(this.setAttribute("data-sorted","true"),this.setAttribute("data-sorted-direction",h),o=a.tBodies[0],l=[],m){for(D=o.rows,v=0,z=D.length;z>v;v++)g=D[v],l.push(g);for(l.reverse(),B=0,A=l.length;A>B;B++)k=l[B],o.appendChild(k)}else{for(r=null!=i.compare?i.compare:function(a,b){return b-a},c=function(a,b){return a[0]===b[0]?a[2]-b[2]:i.reverse?r(b[0],a[0]):r(a[0],b[0])},C=o.rows,j=t=0,x=C.length;x>t;j=++t)k=C[j],q=e.getNodeValue(k.cells[f]),null!=i.comparator&&(q=i.comparator(q)),l.push([q,k,j]);for(l.sort(c),u=0,y=l.length;y>u;u++)k=l[u],o.appendChild(k[1])}return"function"==typeof window.CustomEvent&&"function"==typeof a.dispatchEvent?a.dispatchEvent(new CustomEvent("Sortable.sorted",{bubbles:!0})):void 0},l=[],j=0,k=c.length;k>j;j++)g=c[j],l.push(b(d,g,h));return l},getColumnType:function(a,b){var c,d,f,g,h,i,j,k,l,m,n;if(d=null!=(l=a.querySelectorAll("th")[b])?l.getAttribute("data-sortable-type"):void 0,null!=d)return e.typesObject[d];for(m=a.tBodies[0].rows,h=0,j=m.length;j>h;h++)for(c=m[h],f=e.getNodeValue(c.cells[b]),n=e.types,i=0,k=n.length;k>i;i++)if(g=n[i],g.match(f))return g;return e.typesObject.alpha},getNodeValue:function(a){var b;return a?(b=a.getAttribute("data-value"),null!==b?b:"undefined"!=typeof a.innerText?a.innerText.replace(g,""):a.textContent.replace(g,"")):""},setupTypes:function(a){var b,c,d,f;for(e.types=a,e.typesObject={},f=[],c=0,d=a.length;d>c;c++)b=a[c],f.push(e.typesObject[b.name]=b);return f}},e.setupTypes([{name:"numeric",defaultSortDirection:"descending",match:function(a){return a.match(d)},comparator:function(a){return parseFloat(a.replace(/[^0-9.-]/g,""),10)||0}},{name:"date",defaultSortDirection:"ascending",reverse:!0,match:function(a){return!isNaN(Date.parse(a))},comparator:function(a){return Date.parse(a)||0}},{name:"alpha",defaultSortDirection:"ascending",match:function(){return!0},compare:function(a,b){return a.localeCompare(b)}}]),setTimeout(e.init,0),"function"==typeof define&&define.amd?define(function(){return e}):"undefined"!=typeof exports?module.exports=e:window.Sortable=e}).call(this);
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1096041231348694" crossorigin="anonymous"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push(
+{google_ad_client: "ca-pub-1096041231348694",enable_page_level_ads: true,overlays: {bottom: true}});
+</script>
+</head>
+
+<body class="container">
+<header>
+<div class="logo"><a href="/"><img src="/IST-logo.webp" alt="Israel Science and Technology Directory" width="63" height="47"></a></div>
+<h1>Israel Science and Technology Directory</h1>
+<button type="submit" onclick="menuTgl(this)"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button>
+</header>
+
+<nav>
+<ul class="menu" id="menu">
+<li><p>Municipal Menu</p></li>
+<li><a href="/municipal/Cities.php">Cities</a></li>
+<li><a href="/municipal/Local-councils.php">Local councils</a></li>
+<li><a href="/municipal/Regional-councils.php">Regional councils</a></li>
+<li><a href="/municipal/Regional-councils-map.php">Map of regional councils</a></li>
+<li><a href="/municipal/Associations.php">Municipal associations</a></li>
+<li><a href="/municipal/Environmental-corporations.php">Municipal corporations</a></li>
+<li><a href="/municipal/Business-centers.php">Business development centers - MATI</a></li>
+<li><a href="/tourism/Regional-info.php">Regional tourism</a></li>
+<li><a href="/gov/">Israeli government</a></li>
+</ul>
+<ins class="adsbygoogle adslot_l"
+data-ad-client="ca-pub-1096041231348694"
+data-ad-slot="8686075629"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</nav>
+<main>
+<h2><a href="./">Municipal Government</a></h2>
+<ins class="adsbygoogle adslot_v"
+data-ad-client="ca-pub-1096041231348694"
+data-ad-slot="8352939997"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<div class="content">
+<p>A Regional Council (מועצה אזורית) includes villages and communities each with a population of less than 2,000.<br>To re-sort the list, click a column heading.</p>
+
+<table data-sortable>
+<caption>Regional Councils</caption>
+<thead><tr><th>N</th><th>District</th><th>Regional Council</th><th>מועצה אזורית</th><th>Phone</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Haifa</td><td><a href="https://www.alona.org.il/">Alona</a></td><td>אלונה</td><td>04.6388561</td></tr><tr><td>2</td><td>Southern</td><td><a href="https://beer-tuvia.org.il/">Beer Tuvia</a></td><td>באר טוביה</td><td>08.8507979</td></tr><tr><td>3</td><td>Yosh</td><td><a href="https://www.binyamin.co.il/">Binyamin</a></td><td>מטה בנימין</td><td>02.9977111</td></tr><tr><td>4</td><td>Southern</td><td><a href="https://bns.org.il/">Bnei Shimon</a></td><td>בני שמעון</td><td>08.9915811</td></tr><tr><td>5</td><td>Central</td><td><a href="https://www.brener.org.il/">Brener</a></td><td>ברנר</td><td>08.9399999</td></tr><tr><td>6</td><td>Northern</td><td><a href="https://bostanalmarj.co.il/">Bustan al-Marj</a></td><td>בוסתאן אל-מרג'</td><td>04.6424555</td></tr><tr><td>7</td><td>Southern</td><td><a href="https://www.arava.co.il/">Central Arava</a></td><td>ערבה תיכונה</td><td>08.6592201</td></tr><tr><td>8</td><td>Northern</td><td><a href="https://mdec.co.il/">Daliyat al-Karmel</a></td><td>דאלית אל כרמל</td><td>04.8395333</td></tr><tr><td>9</td><td>Central</td><td><a href="https://www.dsharon.org.il/">Drom Hasharon</a></td><td>דרום השרון</td><td>03.9000500</td></tr><tr><td>10</td><td>Northern</td><td><a href="http://el-batouf-region.muni.il/he/">El-Batouf</a></td><td>אל-בטוף</td><td>04.6518855</td></tr><tr><td>11</td><td>Northern</td><td><a href="https://emek-maianot-region.muni.il/">Emek Hama’ayanot</a></td><td>עמק המעיינות</td><td>04.6065850</td></tr><tr><td>12</td><td>Northern</td><td><a href="https://www.j-v.org.il/">Emek Hayarden</a></td><td>עמק הירדן</td><td>04.6757600</td></tr><tr><td>13</td><td>Central</td><td><a href="https://www.hefer.org.il/">Emek Hefer</a></td><td>עמק חפר</td><td>09.8981666</td></tr><tr><td>14</td><td>Northern</td><td><a href="https://www.emekyizrael.org.il/">Emek Yizrael</a></td><td>עמק יזרעאל</td><td>04.6520111</td></tr><tr><td>15</td><td>Southern</td><td><a href="https://eshkol.info/">Eshkol</a></td><td>אשכול</td><td>08.9929111</td></tr><tr><td>16</td><td>Northern</td><td><a href="https://www.galil-elion.org.il/">Galil Elion (Upper Galilee)</a></td><td>גליל עליון</td><td>04.6816611</td></tr><tr><td>17</td><td>Central</td><td><a href="https://www.ganrave.org.il/">Gan Rave</a></td><td>גן רוה</td><td>08.9408230</td></tr><tr><td>18</td><td>Central</td><td><a href="https://www.gderot.muni.il/">Gderot</a></td><td>גדרות</td><td>08.8592950</td></tr><tr><td>19</td><td>Central</td><td><a href="https://www.gezer-region.muni.il/">Gezer</a></td><td>גזר</td><td>08.9274040</td></tr><tr><td>20</td><td>Northern</td><td><a href="https://www.hagilboa.org.il/">Gilboa</a></td><td>גלבוע</td><td>04.6533233</td></tr><tr><td>21</td><td>Northern</td><td><a href="https://www.golan.org.il/ramathagolan/">Golan</a></td><td>גולן</td><td>04.6969777</td></tr><tr><td>22</td><td>Yosh</td><td><a href="https://baitisraeli.co.il/">Gush Etzion</a></td><td>גוש עציון</td><td>02.9939933</td></tr><tr><td>23</td><td>Yosh</td><td><a href="https://www.hrhevron.co.il/">Har Hevron</a></td><td>הר חברון</td><td>02.9969111</td></tr><tr><td>24</td><td>Southern</td><td><a href="https://www.eilot.org.il/">Hevel Eilot</a></td><td>חבל אילות</td><td>08.6355888</td></tr><tr><td>25</td><td>Central</td><td><a href="https://www.hevel-yavne.org.il/">Hevel Yavne</a></td><td>חבל יבנה</td><td>08.8561011</td></tr><tr><td>26</td><td>Southern</td><td><a href="https://www.hof-ashkelon.org.il/">Hof Ashkelon</a></td><td>חוף אשקלון</td><td>08.6775555</td></tr><tr><td>27</td><td>Haifa</td><td><a href="https://www.hof-hacarmel.co.il/">Hof HaKarmel</a></td><td>חוף הכרמל</td><td>04.8136200</td></tr><tr><td>28</td><td>Central</td><td><a href="https://hof-hasharon.co.il/">Hof HaSharon</a></td><td>חוף השרון</td><td>09.9596555</td></tr><tr><td>29</td><td>Yosh</td><td><a href="https://www.jordanvalley.org.il/">Jordan Valley</a></td><td>בקעת הירדן</td><td>02.9946666</td></tr><tr><td>30</td><td>Southern</td><td><a href="https://lachish.org.il/">Lachish</a></td><td>לכיש</td><td>08.6871666</td></tr><tr><td>31</td><td>Central</td><td><a href="https://www.lev-hasharon.com/">Lev HaSharon</a></td><td>לב השרון</td><td>09.7960222</td></tr><tr><td>32</td><td>Northern</td><td><a href="https://www.myosef.org.il/">Maale Yosef</a></td><td>מעלה יוסף</td><td>04.9105500</td></tr><tr><td>33</td><td>Northern</td><td><a href="https://www.matte-asher-region.muni.il/he/">Mateh Asher</a></td><td>מטה אשר</td><td>04.9879666</td></tr><tr><td>34</td><td>Jerusalem</td><td><a href="https://m-yehuda.org.il/">Mateh Yehuda</a></td><td>מטה יהודה</td><td>02.9900888</td></tr><tr><td>35</td><td>Northern</td><td><a href="https://megido.org.il/">Megido</a></td><td>מגידו</td><td>04.9598444</td></tr><tr><td>36</td><td>Yosh</td><td><a href="https://www.dead-sea.org.il/">Megilot Yam HaMelah</a></td><td>מגילות ים המלח</td><td>02.9943222</td></tr><tr><td>37</td><td>Haifa</td><td><a href="https://www.menashe.co.il/">Menashe</a></td><td>מנשה</td><td>04.6177301</td></tr><tr><td>38</td><td>Southern</td><td><a href="https://www.merchavim.org.il/">Merhavim</a></td><td>מרחבים</td><td>08.9929480</td></tr><tr><td>39</td><td>Northern</td><td><a href="https://www.mrg.org.il/">Merom HaGalil</a></td><td>מרום הגליל</td><td>04.6919800</td></tr><tr><td>40</td><td>Northern</td><td><a href="https://www.mvhr.org.il/">Mevoot Hermon</a></td><td>מבואות החרמון</td><td>04.6942120</td></tr><tr><td>41</td><td>Northern</td><td><a href="https://www.misgav.org.il/">Misgav</a></td><td>משגב</td><td>04.9902311</td></tr><tr><td>42</td><td>Central</td><td><a href="https://www.modiin-region.muni.il/">Modiin Region</a></td><td>חבל מודיעין</td><td>03.9722888</td></tr><tr><td>43</td><td>Central</td><td><a href="https://www.ma-soreq.org.il/">Nahal Soreq</a></td><td>נחל שורק</td><td>08.8593180</td></tr><tr><td>44</td><td>Southern</td><td><a href="https://www.nevemidbar.org.il/">Neve Midbar</a></td><td>נווה מדבר</td><td>08.6655543</td></tr><tr><td>45</td><td>Southern</td><td><a href="https://www.rng.org.il/">Ramat Negev</a></td><td>רמת הנגב</td><td>08.6564111</td></tr><tr><td>46</td><td>Central</td><td><a href="https://www.sdan.org.il/">Sadot Dan</a></td><td>שדות דן</td><td>073.2230600</td></tr><tr><td>47</td><td>Southern</td><td><a href="https://www.sdotnegev.org.il/">Sdot Negev</a></td><td>שדות נגב</td><td>08.9938933</td></tr><tr><td>48</td><td>Southern</td><td><a href="https://www.sng.org.il/">Shaar HaNegev</a></td><td>שער הנגב</td><td>08.6806237</td></tr><tr><td>49</td><td>Northern</td><td><a href="https://www.glt.org.il/">Shaar Hagalil (Lower Galilee)</a></td><td>שער הגליל (גליל תחתון)</td><td>04.6767213</td></tr><tr><td>50</td><td>Southern</td><td><a href="https://www.shaffir.org.il/">Shafir</a></td><td>שפיר</td><td>08.8508901</td></tr><tr><td>51</td><td>Yosh</td><td><a href="https://www.shomron.org.il/">Shomron</a></td><td>שומרון</td><td>02.9061156</td></tr><tr><td>52</td><td>Southern</td><td><a href="https://www.ma-tamar.org.il/">Tamar</a></td><td>תמר</td><td>08.6688888</td></tr><tr><td>53</td><td>Southern</td><td><a href="https://www.yoav.org.il/">Yoav</a></td><td>יואב</td><td>08.8500777</td></tr><tr><td>54</td><td>Haifa</td><td><a href="https://www.zvulun.org.il/">Zvulun</a></td><td>זבולון</td><td>04.8478111</td></tr></tbody>
+</table>
+
+<p><a href="http://www.yadkatif.com/">Gush Katif Memorial site - We shall remember and return.</a></p>
+
+</div>
+</main>
+<footer>
+<p class="menufooter">
+<a href="/">Home</a> &nbsp; <a href="/Search.php">Search</a> &nbsp; <a href="/About.php">About</a> &nbsp; <a href="/contact/">Contact</a></p>
+<p><a href="/Copyright.php">Copyright ©</a> <a href="https://www.science.co.il/">Israel Science and Technology Directory</a>. 1999‑2023 - All&nbsp;Rights&nbsp;Reserved.</p>
+</footer>
+</body>
+</html>
