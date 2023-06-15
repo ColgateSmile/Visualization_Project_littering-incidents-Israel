@@ -1,4 +1,5 @@
 ydata-profiling
 pandas
 numpy
+beautifulsoup4
 ipykernel
