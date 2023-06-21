@@ -2,3 +2,5 @@ ydata-profiling
 pandas
 numpy
 ipykernel
+nltk
+openpyxl
