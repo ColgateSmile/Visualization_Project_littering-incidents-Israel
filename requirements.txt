@@ -4,3 +4,4 @@ numpy
 ipykernel
 nltk
 openpyxl
+bs4
