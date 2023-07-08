@@ -3,12 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <title>Document</title>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        
+        <title>Littering in Israel</title>
     </head>
     <body>
+        <nav>
+            <button><a href="index.html">Home</a></button>
+            <button><a href="ideas/index.html">Population Pyramid</a></button>
+        </nav>
         <div id="plotly-div"></div>
-        <script src="script.js">
+        <div id="highcharts-div"></div>
+        <script src="plotly_script.js"></script>
+        <script src="highcharts_script.js"></script>
+        <script>
+            plotlyPyramid('category', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'plotly-div');
+            highchartsPyramid('category', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'highcharts-div');
         </script>
     </body>
 </html>
