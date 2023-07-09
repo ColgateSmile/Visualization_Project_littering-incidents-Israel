@@ -13,15 +13,7 @@
     <body>
         <nav>
             <button><a href="index.html">Home</a></button>
-            <button><a href="ideas/index.html">Population Pyramid</a></button>
+            <button><a href="pyramid.html">Population Pyramid</a></button>
         </nav>
-        <div id="plotly-div"></div>
-        <div id="highcharts-div"></div>
-        <script src="plotly_script.js"></script>
-        <script src="highcharts_script.js"></script>
-        <script>
-            plotlyPyramid('category', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'plotly-div');
-            highchartsPyramid('category', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'highcharts-div');
-        </script>
     </body>
 </html>
