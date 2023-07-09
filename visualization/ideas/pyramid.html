@@ -9,13 +9,18 @@
     <title>Pyramid Visualizations</title>
 </head>
 <body>
-    <div id="plotly-div"></div>
-    <div id="highcharts-div"></div>
+    <div style="display: flex; flex-direction: column; justify-content:space-evenly; height: 100%;">
+        <div id="subcatPyramid"></div>
+        <div id="agePyramid"></div>
+    </div>
+    <!-- <div id="plotly-div"></div> -->
+
     <script src="plotly_script.js"></script>
     <script src="highcharts_script.js"></script>
     <script>
         // plotlyPyramid('age', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'plotly-div');
-        highchartsPyramid('age', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'highcharts-div');
+        highchartsPyramid('age', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'agePyramid');
+        highchartsPyramid('subcategory', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'subcatPyramid');
     </script>
 </body>
 </html>
