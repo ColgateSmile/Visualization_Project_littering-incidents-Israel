@@ -18,9 +18,35 @@
     <script src="plotly_script.js"></script>
     <script src="highcharts_script.js"></script>
     <script>
+        agePyramid = {
+            // 'age', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'agePyramid'
+            'data': {
+                'aggregated_column' : 'age',
+                'split_column' : 'gender',
+                'sort' : 'desc',
+            },
+            'layout' : {
+                'title' : 'Age Pyramid',
+                'palette' : {'male' : 'lightblue', 'female' : 'salmon'},
+                'div_id' : 'agePyramid'
+            }
+        }
+        subcategoryPyramid = {
+            'data': {
+                'aggregated_column' : 'subcategory',
+                'split_column' : 'gender',
+                'sort' : 'asc'
+            },
+            'layout' : {
+                'title' : 'Subcategory Pyramid',
+                'palette' : {'male' : 'lightblue', 'female' : 'salmon'},
+                'div_id' : 'subcatPyramid'
+            }
+        }
+
         // plotlyPyramid('age', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'plotly-div');
-        highchartsPyramid('age', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'agePyramid');
-        highchartsPyramid('subcategory', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'subcatPyramid');
+        highchartsPyramid(agePyramid);
+        highchartsPyramid(subcategoryPyramid);
     </script>
 </body>
 </html>

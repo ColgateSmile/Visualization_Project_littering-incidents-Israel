@@ -15,7 +15,56 @@ const aggregate_by = (data, aggregation_label, split_label) => data.reduce(funct
   return acc;
 }, {});
 
-const highchartsPyramid = (y_label, split_column, palette, div) => {
+const get_split = (aggregatedData, aggregation_label, split_column, value) => Object.values(aggregatedData)
+.filter(row => row[split_column] === value)
+.map(row => {
+  return {
+    [aggregation_label]: row[aggregation_label],
+    count: row.count
+  };
+});
+
+const make_reflected = (seriesData, splitValues, distinctValues) => {
+  for (const value of distinctValues) {
+    seriesData[value] = splitValues[value].map(row => ({
+      name: value,
+      y: value === distinctValues[0] ? -row.count : row.count // Negative values for first distinct value
+    }));
+  }
+  return seriesData;
+}
+
+const highchartsPyramid = options => {
+
+  if (!options)
+    return;
+  if (!options['data'] || !options['layout'])
+    return;
+  
+  const data = options['data'];
+  const layout = options['layout'];
+
+  if (!data['aggregated_column'] || !data['split_column']){
+    console.log('Missing required data columns.');
+    return;
+  }
+  if (!layout['palette'] || !layout['div_id']){
+    console.log('Missing required layout options.');
+    return;
+  }
+
+  const aggregated_column = data['aggregated_column']
+  const split_column = data['split_column']
+
+  const palette = layout['palette']
+  const div = layout['div_id']
+
+  const sort = data['sort'] || undefined
+  if (sort && sort !== 'asc' && sort !== 'desc') {
+    console.error('Sort must be either "asc" or "desc".');
+    return;
+  }
+
   const pyramid = results => {
     // Extract the data from the parsed CSV
     const csvData = results.data;
@@ -27,53 +76,36 @@ const highchartsPyramid = (y_label, split_column, palette, div) => {
       console.error('Split column must have exactly two distinct values.');
       return;
     }
+    if (distinctValues.includes(undefined)) {
+      distinctValues.splice(distinctValues.indexOf(undefined), 1);
+    }
 
-    // Aggregate the count of records by y_label and split_column
-    const aggregatedData = csvData.reduce(function(acc, row) {
-      const y_label_value = row[y_label];
-      const split_value = row[split_column];
-      const key = y_label_value + '-' + split_value;
-      if (!acc[key]) {
-        acc[key] = { [y_label]: y_label_value, [split_column]: split_value, count: 0 };
-      }
-      acc[key].count++;
-      return acc;
-    }, {});
+    // Aggregate the count of records by aggregated_column and split_column
+    const aggregatedData = aggregate_by(csvData, aggregated_column, split_column)
 
     // Extract the aggregated data into separate arrays for the two split values
-    const splitValue1 = Object.values(aggregatedData)
-      .filter(row => row[split_column] === distinctValues[0])
-      .map(row => {
-        return {
-          [y_label]: row[y_label],
-          count: row.count
-        };
-      });
+    const splitValues = {}
+    for (const value of distinctValues) {
+      splitValues[value] = get_split(aggregatedData, aggregated_column, split_column, value)
+    }
 
-    const splitValue2 = Object.values(aggregatedData)
-      .filter(row => row[split_column] === distinctValues[1])
-      .map(row => {
-        return {
-          [y_label]: row[y_label],
-          count: row.count
-        };
-      });
-
-    // Sort the y_label groups alphanumerically
-    splitValue1.sort((a, b) => -a[y_label].localeCompare(b[y_label]));
-    splitValue2.sort((a, b) => -a[y_label].localeCompare(b[y_label]));
+    // Sort the aggregated_column groups alphanumerically
+    if (sort) {
+      const order = sort === 'asc' ? 1 : -1;
+      for (const value of distinctValues) {
+        
+        splitValues[value].sort((a, b) => order * a[aggregated_column].localeCompare(b[aggregated_column]));
+      }
+    }
 
     // Create the chart series data arrays with the extracted data
-    const seriesData1 = splitValue1.map(row => ({
-      name: distinctValues[0],
-      y: -row.count // Negative values for first distinct value
-    }));
+    const seriesData = make_reflected({}, splitValues, distinctValues);
 
-    const seriesData2 = splitValue2.map(row => ({
-      name: distinctValues[1],
-      y: row.count
-    }));
-
+    const series = [];
+    for (const value of distinctValues) {
+      series.push({ name: value, data: seriesData[value] });
+    }
+    
     // Create the chart options object
     const options = {
       chart: {
@@ -81,19 +113,19 @@ const highchartsPyramid = (y_label, split_column, palette, div) => {
         renderTo: div
       },
       title: {
-        text: y_label + ' distribution by ' + split_column
+        text: aggregated_column + ' distribution by ' + split_column
       },
       xAxis: [{
-        categories: splitValue1.map(row => row[y_label]),
+        categories: splitValues[distinctValues[0]].map(row => row[aggregated_column]),
         reversed: true,
         title: {
-          text: y_label
+          text: aggregated_column
         }
       }, { // mirror axis on right side
         opposite: true,
         reversed: true,
         linkedTo: 0,
-        categories: splitValue1.map(row => row[y_label]),
+        categories: splitValues[distinctValues[1]].map(row => row[aggregated_column]),
         labels: {
           step: 1
         }
@@ -117,7 +149,7 @@ const highchartsPyramid = (y_label, split_column, palette, div) => {
             '<b>' +
             this.series.name +
             ', ' +
-            y_label +
+            aggregated_column +
             ' ' +
             this.point.category +
             '</b><br/>Littering incidents: ' +
@@ -125,7 +157,7 @@ const highchartsPyramid = (y_label, split_column, palette, div) => {
           );
         }
       },
-      series: [{ name: distinctValues[0], data: seriesData1 }, { name: distinctValues[1], data: seriesData2 }]
+      series: series
     };
 
     // Apply the color palette to the chart series
