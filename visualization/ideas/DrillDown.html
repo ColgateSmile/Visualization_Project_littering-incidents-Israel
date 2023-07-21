@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highcharts Drilldown Barchart</title>
+  <!-- Include the Highcharts library -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <!-- Include the Highcharts Drilldown module -->
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <!-- Include the PapaParse library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+
+  <script>
+    // Function to transform the CSV data for Highcharts Drilldown
+    function transformData(csvData) {
+      const locationTypeData = {};
+      csvData.forEach((row) => {
+        const locationType = row.location_type;
+        const category = row.category;
+
+        if (!locationTypeData[locationType]) {
+          locationTypeData[locationType] = {
+            name: locationType,
+            y: 0,
+            drilldown: locationType,
+            categories: {},
+          };
+        }
+
+        locationTypeData[locationType].y += 1;
+
+        if (!locationTypeData[locationType].categories[category]) {
+          locationTypeData[locationType].categories[category] = {
+            name: category,
+            y: 0,
+          };
+        }
+        locationTypeData[locationType].categories[category].y += 1;
+      });
+
+      const drilldownData = Object.keys(locationTypeData).map((locationType) => {
+        const locationTypeObj = locationTypeData[locationType];
+        locationTypeObj.data = Object.values(locationTypeObj.categories);
+        return locationTypeObj;
+      });
+
+      return drilldownData;
+    }
+
+    // Function to create the Highcharts Drilldown barchart
+    function createChart(data) {
+      Highcharts.chart('chartContainer', {
+        chart: {
+          type: 'column',
+        },
+        title: {
+          text: 'Drilldown Barchart',
+        },
+        xAxis: {
+          type: 'category',
+        },
+        yAxis: {
+          title: {
+            text: 'Number of Littering Incidents',
+          },
+        },
+        series: [
+          {
+            name: 'Location Type',
+            colorByPoint: true,
+            data: data,
+          },
+        ],
+        drilldown: {
+          series: data.map((locationTypeObj) => ({
+            name: locationTypeObj.name,
+            id: locationTypeObj.name,
+            data: locationTypeObj.data,
+          })),
+        },
+      });
+    }
+
+    // Read the CSV file and create the chart
+    Papa.parse('clean_dataset.csv', {
+      header: true,
+      download: true,
+      skipEmptyLines: true,
+      complete: function (results) {
+        const csvData = results.data;
+        const drilldownData = transformData(csvData);
+        createChart(drilldownData);
+      },
+    });
+  </script>
+</body>
+</html>
