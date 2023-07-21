@@ -1,25 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-    <script src="https://code.highcharts.com/modules/marker-clusters.js"></script>
-    <script src="https://code.highcharts.com/modules/coloraxis.js"></script>
-    <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
-
-    <title>Markers Map</title>
+  <title>Highcharts Map with Marker Clusters</title>
+  <!-- Include the Highcharts library -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <!-- Include the Highcharts Maps module -->
+  <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+  <!-- Include the Highcharts Data module -->
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <!-- Include the Highcharts Marker Clusters plugin -->
+  <script src="https://code.highcharts.com/modules/marker-clusters.js"></script>
+  <!-- Include the PapaParse library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
+  <div id="mapContainer" style="height: 600px; width: 100%;"></div>
 
-    <figure class="highcharts-figure">
-        <div id="container"></div>
-        <div class="highcharts-description">
-            This demo uses a <code>mappoint</code> series with mapmarker symbols.
-        </div>
-    </figure>
-    <script src="highchart_maps.js">     
-    </script>
+  <script>
+    // Function to transform the CSV data into GeoJSON format
+    function transformData(csvData) {
+      const geoJSON = {
+        type: 'FeatureCollection',
+        features: [],
+      };
+
+      csvData.forEach((row) => {
+        const longitude = parseFloat(row.longitude);
+        const latitude = parseFloat(row.latitude);
+
+        if (!isNaN(longitude) && !isNaN(latitude)) {
+          geoJSON.features.push({
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [longitude, latitude],
+            },
+            properties: {
+              name: row.location_type,
+              category: row.category,
+              gender: row.gender,
+              age: row.age,
+              attitude: row.attitude,
+              notes: row.notes,
+            },
+          });
+        }
+      });
+
+      return geoJSON;
+    }
+
+    // Function to create the Highcharts map with marker clusters
+    function createMap(data) {
+      console.log(data); // Check if the data is correctly transformed
+      Highcharts.getJSON('world.geo.json', function (mapData) {
+        Highcharts.mapChart('mapContainer', {
+          chart: {
+            map: mapData, // Use the world map layout
+          },
+          title: {
+            text: 'Littering Incidents Map with Marker Clusters',
+          },
+          tooltip: {
+            formatter: function () {
+              const point = this.point;
+              let tooltip = '<b>Location Type:</b> ' + (point.properties.name || '') + '<br>';
+              tooltip += '<b>Category:</b> ' + (point.properties.category || '') + '<br>';
+              tooltip += '<b>Gender:</b> ' + (point.properties.gender || '') + '<br>';
+              tooltip += '<b>Age:</b> ' + (point.properties.age || '') + '<br>';
+              tooltip += '<b>Attitude:</b> ' + (point.properties.attitude || '') + '<br>';
+              tooltip += '<b>Notes:</b> ' + (point.properties.notes || '') + '<br>';
+              return tooltip;
+            },
+          },
+          series: [
+            {
+              type: 'mappoint',
+              name: 'Littering Incidents',
+              data: data.features,
+              dataLabels: {
+                enabled: true,
+                format: '{point.properties.name}',
+              },
+            },
+          ],
+          plotOptions: {
+            mappoint: {
+              cluster: {
+                enabled: true,
+                allowOverlap: false,
+                animation: {
+                  duration: 450,
+                  easing: 'easeOutQuad',
+                },
+                layoutAlgorithm: {
+                  type: 'grid',
+                  gridSize: 70,
+                },
+                marker: {
+                  fillColor: '#005EB8',
+                  lineWidth: 0,
+                  radius: 18,
+                },
+              },
+            },
+          },
+          mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+              verticalAlign: 'bottom',
+            },
+          },
+          colorAxis: {
+            min: 0,
+          },
+        });
+      });
+    }
+
+    // Wrap code inside DOMContentLoaded event listener
+    document.addEventListener('DOMContentLoaded', function () {
+      // Load the CSV file using Fetch API
+      fetch('clean_dataset.csv')
+        .then((response) => response.text())
+        .then((csvData) => {
+          // Convert CSV data to array of objects
+          const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true });
+          const geoJSONData = transformData(parsedData.data);
+          createMap(geoJSONData);
+        })
+        .catch((error) => {
+          console.error('Error while fetching CSV:', error);
+        });
+    });
+  </script>
 </body>
 </html>
