@@ -16,6 +16,8 @@
     // Function to transform the CSV data for Highcharts Drilldown
     function transformData(csvData) {
       const locationTypeData = {};
+      const categoryColors = {}; // Color mapping for categories
+
       csvData.forEach((row) => {
         const locationType = row.location_type;
         const category = row.category;
@@ -35,15 +37,17 @@
           locationTypeData[locationType].categories[category] = {
             name: category,
             y: 0,
+            color: categoryColors[category] || null, // Use the color mapping for categories
           };
         }
         locationTypeData[locationType].categories[category].y += 1;
+        categoryColors[category] = locationTypeData[locationType].categories[category].color || Highcharts.getOptions().colors[categoryColors.length]; // Set color for each category
       });
 
-      const drilldownData = Object.keys(locationTypeData).map((locationType) => {
-        const locationTypeObj = locationTypeData[locationType];
-        locationTypeObj.data = Object.values(locationTypeObj.categories);
-        return locationTypeObj;
+      const drilldownData = Object.values(locationTypeData).sort((a, b) => b.y - a.y); // Sort by descending order
+
+      drilldownData.forEach((locationTypeObj) => {
+        locationTypeObj.data = Object.values(locationTypeObj.categories).sort((a, b) => b.y - a.y); // Sort secondary data by descending order
       });
 
       return drilldownData;
@@ -77,8 +81,24 @@
           series: data.map((locationTypeObj) => ({
             name: locationTypeObj.name,
             id: locationTypeObj.name,
-            data: locationTypeObj.data,
+            data: locationTypeObj.data.map((categoryObj) => ({
+              name: categoryObj.name,
+              y: categoryObj.y,
+              color: categoryObj.color, // Use fixed color for each category
+            })),
           })),
+        },
+        // Customize the legend
+        legend: {
+          useHTML: true,
+          labelFormatter: function () {
+            const point = this;
+            if (point.isDrilldown) {
+              return `<div><span style="color:${point.color};">${point.name}</span></div>`;
+            } else {
+              return `<div>${point.name}</div>`;
+            }
+          },
         },
       });
     }
