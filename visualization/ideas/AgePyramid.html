@@ -31,22 +31,9 @@
                 'div_id' : 'agePyramid'
             }
         }
-        subcategoryPyramid = {
-            'data': {
-                'aggregated_column' : 'subcategory',
-                'split_column' : 'gender',
-                'sort' : 'asc'
-            },
-            'layout' : {
-                'title' : 'Subcategory Pyramid',
-                'palette' : {'male' : 'lightblue', 'female' : 'salmon'},
-                'div_id' : 'subcatPyramid'
-            }
-        }
+        
 
-        // plotlyPyramid('age', 'gender', {'male' : 'lightblue', 'female' : 'salmon'}, 'plotly-div');
         highchartsPyramid(agePyramid);
-        highchartsPyramid(subcategoryPyramid);
     </script>
 </body>
 </html>

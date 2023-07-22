@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <title>Pyramid Visualizations</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; justify-content:space-evenly; height: 100%;">
+        <div id="subcatPyramid"></div>
+        <div id="agePyramid"></div>
+    </div>
+    <!-- <div id="plotly-div"></div> -->
+
+    <script src="plotly_script.js"></script>
+    <script src="highcharts_script.js"></script>
+    <script>
+
+        subcategoryPyramid = {
+            'data': {
+                'aggregated_column' : 'subcategory',
+                'split_column' : 'gender',
+                'sort' : 'asc'
+            },
+            'layout' : {
+                'title' : 'Subcategory Pyramid',
+                'palette' : {'male' : 'lightblue', 'female' : 'salmon'},
+                'div_id' : 'subcatPyramid'
+            }
+        }
+        highchartsPyramid(subcategoryPyramid);
+    </script>
+</body>
+</html>
