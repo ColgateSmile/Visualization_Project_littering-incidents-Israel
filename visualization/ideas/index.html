@@ -8,6 +8,29 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <title>Littering in Israel</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            width: 80vw;
+        }
+        .widget {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -19,5 +42,24 @@
             <li><a href="DrillDown.html" class="button">Drilldown</a></li>
         </ul>
     </nav>
+    <h1>Littering Incidents Dashboard</h1>
+    <div class="dashboard">
+        <div class="widget">
+            <h2>Widget 1</h2>
+            <!-- Content for widget 1 goes here -->
+        </div>
+        <div class="widget">
+            <h2>Widget 2</h2>
+            <!-- Content for widget 2 goes here -->
+        </div>
+        <div class="widget">
+            <h2>Widget 3</h2>
+            <!-- Content for widget 3 goes here -->
+        </div>
+        <div class="widget">
+            <h2>Widget 4</h2>
+            <!-- Content for widget 4 goes here -->
+        </div>
+    </div>
 </body>
 </html>
