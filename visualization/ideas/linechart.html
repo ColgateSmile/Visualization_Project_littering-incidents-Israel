@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+  <div id="container" style="width: 100%; height: 400px;"></div>
+  <script>
+    monthFormat = "%B %Y"
+    dayFormat = "%B %e, %Y"
+    // Load the data from the CSV file
+    d3.csv("clean_dataset.csv").then(function (data) {
+      // Parse the dates and sort the data by date
+      var parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S");
+      data.forEach(function (d) {
+        d.date = parseTime(d.incident_time);
+      });
+      data.sort(function (a, b) { return a.date - b.date; });
+
+      // Group the data by month
+      var monthData = d3.nest()
+        .key(function (d) { return d3.timeFormat(monthFormat)(d.date); })
+        .rollup(function (v) { return v.length; })
+        .entries(data);
+
+      // Group the data by both year-month and day
+      var dayData = d3.nest()
+        .key(function (d) { return d3.timeFormat(monthFormat)(d.date); })
+        .key(function (d) { return d3.timeFormat(dayFormat)(d.date); }) // Adjust key to include the full date
+        .rollup(function (v) { return v.length; })
+        .entries(data);
+
+      // Convert the data to the format expected by Highcharts
+      monthData = monthData.map(function (d) {
+        return {
+          name: d.key,
+          y: d.value,
+          drilldown: d.key,
+          marker: {
+            symbol: 'circle', // Set the marker shape for the main series
+            radius: 4 // Set the marker radius for the main series
+          }
+        };
+      });
+      dayData = dayData.map(function (d) {
+        return {
+          id: d.key,
+          name: d.key, // Set the series name to show the full date in the xAxis
+          data: d.values.map(function (v) {
+            return [v.key, v.value];
+          }),
+          marker: {
+            symbol: 'circle', // Set the marker shape for the drilldown series
+            radius: 4 // Set the marker radius for the drilldown series
+          }
+        };
+      });
+
+      // Create the chart
+      Highcharts.chart('container', {
+        chart: {
+          type: 'line'
+        },
+        title: {
+          text: 'Number of Incidents Over Time'
+        },
+        xAxis: {
+          type: 'category',
+          labels: {
+            formatter: function () {
+              return this.value; // Show the full date in the day overview
+            }
+          }
+        },
+        tooltip: {
+          headerFormat: '<b>{point.key}</b><br>', // Show the full date in the tooltip header
+          pointFormat: 'Incidents: {point.y}'
+        },
+        legend: {
+          enabled: false
+        },
+        series: [{
+          name: 'Incidents',
+          data: monthData,
+          color: '#007BFF' // Set the line color for the main series
+        }],
+        drilldown: {
+          series: dayData,
+          activeAxisLabelStyle: {
+            color: '#333' // Set the axis label color for drilldown series
+          },
+          activeDataLabelStyle: {
+            color: '#333' // Set the data label color for drilldown series
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
