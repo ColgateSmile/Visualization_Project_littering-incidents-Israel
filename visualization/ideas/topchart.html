@@ -23,23 +23,25 @@
                     var data1 = Papa.parse(dataCsv1, { header: true }).data;
                     var data2 = Papa.parse(dataCsv2, { header: true }).data;
 
-                    console.log('Data 1:', data1);
-                    console.log('Data 2:', data2);
+                    // Group data1 by city and calculate total incidents
+                    var incidentsByCity = _.groupBy(data1, 'city');
+                    var totalIncidentsByCity = _.mapValues(incidentsByCity, cityData => cityData.length);
 
+                    // Group data2 by city and calculate total population
+                    var populationByCity = _.keyBy(data2, 'city');
+                    var totalPopulationByCity = _.mapValues(populationByCity, cityData => parseInt(cityData.population));
+
+                    // Merge total incidents and total population by city
                     var mergedData = _.mergeWith(
-                        _.keyBy(data1, 'city'),
-                        _.keyBy(data2, 'city'),
-                        (objValue, srcValue) => {
-                            if (_.isObject(objValue) && _.isObject(srcValue)) {
-                                return _.merge(objValue, srcValue);
-                            }
-                        }
+                        totalIncidentsByCity,
+                        totalPopulationByCity,
+                        (totalIncidents, totalPopulation) => ({ totalIncidents, totalPopulation })
                     );
-                    console.log('Merged Data:', mergedData);
 
-                    var processedData = _.map(mergedData, row => ({
-                        name: row.city_heb + ' (' + row.city + ')',
-                        y: parseFloat(row.incidents) / parseFloat(row.population)
+                    // Calculate incidents per capita for each city
+                    var processedData = _.map(mergedData, (data, city) => ({
+                        name: data.city_heb + ' (' + city + ')',
+                        y: data.totalIncidents / data.totalPopulation
                     }));
 
                     console.log('Processed Data:', processedData);
