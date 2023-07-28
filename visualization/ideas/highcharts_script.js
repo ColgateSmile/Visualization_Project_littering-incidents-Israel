@@ -170,3 +170,135 @@ const highchartsPyramid = options => {
   }
   display_chart(pyramid)
 }
+
+const highchartsColumnChart = options => {
+  if (!options)
+    return;
+  if (!options['data'] || !options['layout'])
+    return;
+  
+  const data = options['data'];
+  const layout = options['layout'];
+
+  if (!data['aggregated_column'] || !data['split_column']){
+    console.log('Missing required data columns.');
+    return;
+  }
+  if (!layout['palette'] || !layout['div_id']){
+    console.log('Missing required layout options.');
+    return;
+  }
+
+  const aggregated_column = data['aggregated_column'];
+  const split_column = data['split_column'];
+
+  const palette = layout['palette'];
+  const div = layout['div_id'];
+
+  const sort = data['sort'] || undefined;
+  if (sort && sort !== 'asc' && sort !== 'desc') {
+    console.error('Sort must be either "asc" or "desc".');
+    return;
+  }
+
+  const make_side_by_side = (seriesData, splitValues, distinctValues) => {
+    const numDistinctValues = distinctValues.length;
+
+    for (const value of distinctValues) {
+      const data = splitValues[value].map(row => ({
+        name: row[aggregated_column],
+        y: row.count
+      }));
+
+      // Sort the data in descending order
+      data.sort((a, b) => b.y - a.y);
+
+      seriesData[value] = {
+        name: value,
+        data: data,
+      };
+    }
+    return seriesData;
+  };
+
+  const columnChart = results => {
+    const csvData = results.data;
+
+    const distinctValues = [...new Set(csvData.map(row => row[split_column]))];
+    if (distinctValues.length !== 2 && !(distinctValues.length === 3 && distinctValues.includes(undefined))) {
+      console.error('Split column must have exactly two distinct values.');
+      return;
+    }
+    if (distinctValues.includes(undefined)) {
+      distinctValues.splice(distinctValues.indexOf(undefined), 1);
+    }
+
+    const aggregatedData = aggregate_by(csvData, aggregated_column, split_column);
+
+    const splitValues = {};
+    for (const value of distinctValues) {
+      splitValues[value] = get_split(aggregatedData, aggregated_column, split_column, value);
+    }
+
+    if (sort) {
+      const order = sort === 'asc' ? 1 : -1;
+      for (const value of distinctValues) {
+        splitValues[value].sort((a, b) => order * a[aggregated_column].localeCompare(b[aggregated_column]));
+      }
+    }
+
+    const seriesData = make_side_by_side({}, splitValues, distinctValues);
+
+    const series = Object.values(seriesData);
+
+    const chartOptions = {
+      chart: {
+        type: 'column',
+        renderTo: div
+      },
+      title: {
+        text: aggregated_column + ' distribution by ' + split_column
+      },
+      xAxis: {
+        categories: splitValues[distinctValues[0]].map(row => row[aggregated_column]),
+        title: {
+          text: aggregated_column
+        }
+      },
+      yAxis: {
+        title: {
+          text: null
+        }
+      },
+      legend: {
+        reversed: false
+      },
+      plotOptions: {
+        column: {
+          stacking: 'normal'
+        }
+      },
+      tooltip: {
+        formatter: function() {
+          return (
+            '<b>' +
+            this.series.name +
+            ', ' +
+            this.point.category +
+            '</b><br/>Littering incidents: ' +
+            this.point.y
+          );
+        }
+      },
+      series: series
+    };
+
+    Object.keys(palette).forEach((key, index) => {
+      chartOptions.series[index].color = palette[key];
+    });
+
+    new Highcharts.Chart(chartOptions);
+  };
+
+  display_chart(columnChart);
+};
