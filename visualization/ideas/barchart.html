@@ -10,8 +10,7 @@
 </head>
 <body>
     <div style="display: flex; flex-direction: column; justify-content:space-evenly; height: 100%;">
-        <div id="subcatPyramid"></div>
-        <div id="agePyramid"></div>
+        <div id="subcatChart"></div>
     </div>
     <!-- <div id="plotly-div"></div> -->
 
@@ -19,19 +18,19 @@
     <script src="highcharts_script.js"></script>
     <script>
 
-        subcategoryPyramid = {
+        subcategoryChart = {
             'data': {
                 'aggregated_column' : 'subcategory',
                 'split_column' : 'gender',
                 'sort' : 'asc'
             },
             'layout' : {
-                'title' : 'Subcategory Pyramid',
+                'title' : 'Subcategory Chart',
                 'palette' : {'male' : 'lightblue', 'female' : 'salmon'},
-                'div_id' : 'subcatPyramid'
+                'div_id' : 'subcatChart'
             }
         }
-        highchartsPyramid(subcategoryPyramid);
+        highchartsColumnChart(subcategoryChart);
     </script>
 </body>
 </html>
