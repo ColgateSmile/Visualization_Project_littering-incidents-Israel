@@ -8,9 +8,9 @@
 </head>
 
 <body>
-    <div id="container" style="width:100%; height:400px;"></div>
-    <input type="range" id="slider" min="5" max="40" value="10"> <!-- Add the slider -->
-    <span id="sliderValue">5</span> <!-- Display the slider value -->
+    <div id="container" style="width:100%; height:350px;"></div>
+        <input type="range" id="slider" min="5" max="15" value="10"> <!-- Add the slider -->
+    <span id="sliderValue">10</span> <!-- Display the slider value -->
 
     <script>
         Promise.all([
@@ -35,7 +35,8 @@
 
                     // Merge total incidents and population by city
                     var processedData = _.map(totalIncidentsByCity, (totalIncidents, city) => ({
-                        name: data2.find(item => item.city === city).city + ' (' + data2.find(item => item.city === city).city_heb + ')',
+                        name: data2.find(item => item.city === city).city, // Use English city name
+                        // + ' (' + data2.find(item => item.city === city).city_heb + ')',
                         y: (totalIncidents / populationByCity.get(city)) * 100 // Display as percentage
                     }));
 
@@ -92,9 +93,9 @@
                         updateChart(topK);
                     });
 
-                    // Call updateChart function on page load with the initial slider value
-                    var initialTopK = parseInt(document.getElementById('slider').value);
-                    updateChart(initialTopK);
+                    // Call updateChart function on page load with the default slider value
+                    var defaultTopK = parseInt(document.getElementById('slider').value);
+                    updateChart(defaultTopK);
                 } catch (e) {
                     console.error('Error while processing data or creating chart:', e);
                 }
