@@ -6,43 +6,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
   <link rel="stylesheet" href="StoryStyle.css">
-  <style>
-    .section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .card {
-      width: 80%;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .card.show {
-      opacity: 1;
-    }
-    .section:nth-child(odd) {
-      background-color: #f2f2f2;
-    }
-    .section:nth-child(even) {
-      background-color: #e5e5e5;
-    }
-    .section:nth-child(3n+1) {
-      background-color: #d9d9d9;
-    }
-    .iframe-container {
-      position: relative;
-      overflow: hidden;
-      padding-top: 56.25%; /* 16:9 aspect ratio for the iframes */
-    }
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
   <title>Unveiling the Story of Littering in Israel</title>
 </head>
 <body>
@@ -60,48 +23,64 @@
 
   <div id="fullpage">
     <div class="section" data-step="1" id="section1">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">The Big Picture</h2>
-          <p class="card-text">Our drilldown chart captures the full scope of littering incidents. Each level represents a different layer of the problem, from the general overview down to the specific types of litter found in different locations.</p>
-          <div class="iframe-container">
-            <iframe src="DrillDown.html" allowfullscreen></iframe>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 card">
+            <div class="card-body">
+              <h2 class="card-title">The Big Picture</h2>
+              <p class="card-text">Our drilldown chart captures the full scope of littering incidents. Each level represents a different layer of the problem, from the general overview down to the specific types of litter found in different locations.</p>
+              <div class="iframe-container">
+                <iframe src="DrillDown.html" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="section" data-step="2" id="section2">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Mapping the Issue</h2>
-          <p class="card-text">This map displays the geographical distribution of littering incidents. By viewing the spread, we can identify the areas that require the most attention.</p>
-          <div class="iframe-container">
-            <iframe src="map.html" allowfullscreen></iframe>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 card">
+            <div class="card-body">
+              <h2 class="card-title">Mapping the Issue</h2>
+              <p class="card-text">This map displays the geographical distribution of littering incidents. By viewing the spread, we can identify the areas that require the most attention.</p>
+              <div class="iframe-container">
+                <iframe src="map.html" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="section" data-step="3" id="section3">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">A Closer Look at Gender Differences</h2>
-          <p class="card-text">Our SubCategory Gender Pyramid examines the distribution of littering incidents between genders. Through this, we can determine if certain genders contribute more to the problem and identify potential educational or awareness targets.</p>
-          <div class="iframe-container">
-            <iframe src="SubcatPyramid.html" allowfullscreen></iframe>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 card">
+            <div class="card-body">
+              <h2 class="card-title">A Closer Look at Gender Differences</h2>
+              <p class="card-text">Our SubCategory Gender Pyramid examines the distribution of littering incidents between genders. Through this, we can determine if certain genders contribute more to the problem and identify potential educational or awareness targets.</p>
+              <div class="iframe-container">
+                <iframe src="SubcatPyramid.html" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="section" data-step="4" id="section4">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Age and Its Role</h2>
-          <p class="card-text">The Population Pyramid reflects the age distribution of people involved in littering incidents. Recognizing the age groups most associated with littering can help us tailor prevention measures effectively.</p>
-          <div class="iframe-container">
-            <iframe src="pyramid.html" allowfullscreen></iframe>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 card">
+            <div class="card-body">
+              <h2 class="card-title">Age and Its Role</h2>
+              <p class="card-text">The Population Pyramid reflects the age distribution of people involved in littering incidents. Recognizing the age groups most associated with littering can help us tailor prevention measures effectively.</p>
+              <div class="iframe-container">
+                <iframe src="pyramid.html" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
