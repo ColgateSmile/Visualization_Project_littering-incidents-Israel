@@ -9,6 +9,9 @@
 
 <body>
     <div id="container" style="width:100%; height:400px;"></div>
+    <input type="range" id="slider" min="5" max="40" value="10"> <!-- Add the slider -->
+    <span id="sliderValue">5</span> <!-- Display the slider value -->
+
     <script>
         Promise.all([
             fetch('clean_dataset.csv')
@@ -27,28 +30,24 @@
                     var incidentsByCity = _.groupBy(data1, 'city');
                     var totalIncidentsByCity = _.mapValues(incidentsByCity, cityData => cityData.length);
 
-                    // Group data2 by city and calculate total population
-                    var populationByCity = _.keyBy(data2, 'city');
-                    var totalPopulationByCity = _.mapValues(populationByCity, cityData => parseInt(cityData.population));
+                    // Create a map of city to population from data2
+                    var populationByCity = new Map(data2.map(item => [item.city, parseInt(item.population.replace(/\D/g, ''))]));
 
-                    // Merge total incidents and total population by city
-                    var mergedData = _.mergeWith(
-                        totalIncidentsByCity,
-                        totalPopulationByCity,
-                        (totalIncidents, totalPopulation) => ({ totalIncidents, totalPopulation })
-                    );
-
-                    // Calculate incidents per capita for each city
-                    var processedData = _.map(mergedData, (data, city) => ({
-                        name: data.city_heb + ' (' + city + ')',
-                        y: data.totalIncidents / data.totalPopulation
+                    // Merge total incidents and population by city
+                    var processedData = _.map(totalIncidentsByCity, (totalIncidents, city) => ({
+                        name: data2.find(item => item.city === city).city + ' (' + data2.find(item => item.city === city).city_heb + ')',
+                        y: (totalIncidents / populationByCity.get(city)) * 100 // Display as percentage
                     }));
+
+                    // Sort the processed data in descending order
+                    processedData.sort((a, b) => b.y - a.y);
 
                     console.log('Processed Data:', processedData);
 
-                    Highcharts.chart('container', {
+                    // Initial chart creation
+                    var chart = Highcharts.chart('container', {
                         chart: {
-                            type: 'bar'
+                            type: 'column', // Make the chart vertical
                         },
                         title: {
                             text: 'Littering Incidents per Capita by City'
@@ -58,14 +57,44 @@
                         },
                         yAxis: {
                             title: {
-                                text: 'Incidents per Capita'
+                                text: 'Incidents per Capita (%)'
+                            },
+                            labels: {
+                                formatter: function () {
+                                    return this.value + '%'; // Display yAxis labels as percentage
+                                }
                             }
+                        },
+                        tooltip: {
+                            pointFormat: '{point.name}: <b>{point.y:.2f}%</b>' // Display tooltip as percentage
                         },
                         series: [{
                             name: 'Cities',
                             data: processedData
                         }]
                     });
+
+                    // Update chart when slider value changes
+                    function updateChart(topK) {
+                        var updatedData = processedData.slice(0, topK);
+                        chart.update({
+                            series: [{
+                                data: updatedData
+                            }]
+                        });
+
+                        // Update slider value display
+                        document.getElementById('sliderValue').textContent = topK;
+                    }
+
+                    document.getElementById('slider').addEventListener('input', function () {
+                        var topK = parseInt(this.value);
+                        updateChart(topK);
+                    });
+
+                    // Call updateChart function on page load with the initial slider value
+                    var initialTopK = parseInt(document.getElementById('slider').value);
+                    updateChart(initialTopK);
                 } catch (e) {
                     console.error('Error while processing data or creating chart:', e);
                 }
