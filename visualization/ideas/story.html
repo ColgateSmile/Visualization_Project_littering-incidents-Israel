@@ -1,66 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="StoryStyle.css">
-
-    <title>Unveiling the Story of Littering in Israel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+  <link rel="stylesheet" href="StoryStyle.css">
+  <style>
+    .section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .card {
+      width: 80%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .card.show {
+      opacity: 1;
+    }
+    .section:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+    .section:nth-child(even) {
+      background-color: #e5e5e5;
+    }
+    .section:nth-child(3n+1) {
+      background-color: #d9d9d9;
+    }
+    .iframe-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 aspect ratio for the iframes */
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <title>Unveiling the Story of Littering in Israel</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="pyramid.html">Population Pyramid</a></li>
-                <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
-                <li class="nav-item"><a class="nav-link" href="DrillDown.html">Drilldown</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container my-4">
-        <h1>The Story of Littering Incidents in Israel</h1>
-        
-        <p class="mt-4">Understanding the littering problem in Israel requires us to dig into multiple dimensions of the problem. These visualizations provide a comprehensive, data-driven view of littering incidents in the nation.</p>
-
-        <div class="card-deck">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">The Big Picture</h2>
-                    <p class="card-text">Our drilldown chart captures the full scope of littering incidents. Each level represents a different layer of the problem, from the general overview down to the specific types of litter found in different locations.</p>
-                    <iframe src="DrillDown.html" style="width:100%; height:400px;"></iframe>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">Mapping the Issue</h2>
-                    <p class="card-text">This map displays the geographical distribution of littering incidents. By viewing the spread, we can identify the areas that require the most attention.</p>
-                    <iframe src="map.html" style="width:100%; height:400px;"></iframe>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-deck mt-4">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">A Closer Look at Gender Differences</h2>
-                    <p class="card-text">Our SubCategory Gender Pyramid examines the distribution of littering incidents between genders. Through this, we can determine if certain genders contribute more to the problem and identify potential educational or awareness targets.</p>
-                    <iframe src="SubcatPyramid.html" style="width:100%; height:400px;"></iframe>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">Age and Its Role</h2>
-                    <p class="card-text">The Population Pyramid reflects the age distribution of people involved in littering incidents. Recognizing the age groups most associated with littering can help us tailor prevention measures effectively.</p>
-                    <iframe src="pyramid.html" style="width:100%; height:400px;"></iframe>
-                </div>
-            </div>
-        </div>
-
-        <p class="mt-4">Armed with this knowledge, we can build targeted campaigns to address littering in Israel. Whether it's educating certain age groups, focusing on specific areas, or addressing the types of litter that are most common, data can guide us in the right direction.</p>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="#section1">The Big Picture</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section2">Mapping the Issue</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section3">A Closer Look at Gender Differences</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section4">Age and Its Role</a></li>
+      </ul>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </nav>
+
+  <div id="fullpage">
+    <div class="section" data-step="1" id="section1">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">The Big Picture</h2>
+          <p class="card-text">Our drilldown chart captures the full scope of littering incidents. Each level represents a different layer of the problem, from the general overview down to the specific types of litter found in different locations.</p>
+          <div class="iframe-container">
+            <iframe src="DrillDown.html" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-step="2" id="section2">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Mapping the Issue</h2>
+          <p class="card-text">This map displays the geographical distribution of littering incidents. By viewing the spread, we can identify the areas that require the most attention.</p>
+          <div class="iframe-container">
+            <iframe src="map.html" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-step="3" id="section3">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">A Closer Look at Gender Differences</h2>
+          <p class="card-text">Our SubCategory Gender Pyramid examines the distribution of littering incidents between genders. Through this, we can determine if certain genders contribute more to the problem and identify potential educational or awareness targets.</p>
+          <div class="iframe-container">
+            <iframe src="SubcatPyramid.html" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-step="4" id="section4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Age and Its Role</h2>
+          <p class="card-text">The Population Pyramid reflects the age distribution of people involved in littering incidents. Recognizing the age groups most associated with littering can help us tailor prevention measures effectively.</p>
+          <div class="iframe-container">
+            <iframe src="pyramid.html" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        anchors: ['section1', 'section2', 'section3', 'section4'],
+        onLeave: function(origin, destination, direction) {
+          const previousCard = $(origin.item);
+          const currentCard = $(destination.item);
+          previousCard.find('.card-body').removeClass('show');
+          currentCard.find('.card-body').addClass('show');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
