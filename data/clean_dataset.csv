@@ -125,10 +125,8 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-15 15:44:00,Ramla,commercial,34.8661259,31.9291959,cup,wrappers,male,10-19,positive,
 2021-07-19 08:48:00,Ramla,residential,34.8780747,31.9231455,bottle,liquid containers,female,05-09,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-07-19 09:05:00,Ramla,residential,34.8780747,31.9231455,cup,wrappers,male,30-49,positive,
-2021-07-19 09:18:00,Ramla,residential,34.8780747,31.9231455,dog feces,,male,20-29,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-07-19 11:31:00,Ramla,residential,34.8533399,31.934122,paper,biodegradables,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-07-19 11:30:00,Ramla,residential,34.8533399,31.934122,mask,misc,female,30-49,positive,
-2021-07-19 10:49:00,Ramla,residential,34.8533399,31.934122,dog feces,,male,50-69,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-19 11:58:00,Ramla,residential,34.8533399,31.934122,package,wrappers,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-07-19 12:01:00,Ramla,residential,34.8533399,31.934122,package,wrappers,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-19 12:43:00,Ramla,public,34.859326,31.9281728,mask,misc,female,20-29,negative,הפח היה מלא
@@ -146,7 +144,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-19 14:15:00,Ramla,residential,34.8594466,31.9326055,bag,wrappers,male,20-29,positive,
 2021-07-19 14:17:00,Ramla,residential,34.8594466,31.9326055,mask,misc,female,10-19,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-07-19 14:30:00,Ramla,residential,34.8594466,31.9326055,tincan,liquid containers,male,10-19,positive,
-2021-07-19 14:35:00,Ramla,residential,34.8594466,31.9326055,dog feces,,male,10-19,positive,
 2021-07-19 15:28:00,Ramla,industrial,34.8874174,31.9158586,cup,wrappers,male,30-49,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-07-19 15:30:00,Ramla,industrial,34.8874174,31.9158586,cigarette filter,cigarettes,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-19 15:35:00,Ramla,industrial,34.8874174,31.9158586,bag,wrappers,male,30-49,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
@@ -164,10 +161,7 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-08 14:24:00,Migdal HaEmek,commercial,35.2372033,32.6797117,bag,wrappers,male,70+,negative,
 2021-07-08 14:42:00,Migdal HaEmek,commercial,35.2372033,32.6797117,bag,wrappers,male,30-49,negative,
 2021-07-08 15:05:00,Migdal HaEmek,commercial,35.2372033,32.6797117,cigarette,cigarettes,female,50-69,negative,
-2021-07-08 16:12:00,Migdal HaEmek,leisure,35.2301833,32.6798417,dog feces,,female,20-29,negative,אחר (יש לפרט את התיאור המתאים בהערות)
 2021-07-08 16:33:00,Migdal HaEmek,leisure,35.2301833,32.6798417,package,wrappers,male,30-49,positive,
-2021-07-08 16:36:00,Migdal HaEmek,leisure,35.2301833,32.6798417,dog feces,,male,30-49,negative,
-2021-07-08 17:15:00,Migdal HaEmek,leisure,35.2301833,32.6798417,dog feces,,female,20-29,negative,
 2021-07-08 18:51:00,Migdal HaEmek,leisure,35.2403528,32.6774578,paper,biodegradables,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-07-08 18:54:00,Migdal HaEmek,leisure,35.2403528,32.6774578,bag,wrappers,male,10-19,positive,
 2021-07-08 18:57:00,Migdal HaEmek,leisure,35.2403528,32.6774578,cigarette,cigarettes,male,30-49,negative,
@@ -190,7 +184,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-12 07:30:00,Migdal HaEmek,residential,35.2397017,32.6748917,bag,wrappers,female,30-49,positive,
 2021-07-12 07:36:00,Migdal HaEmek,residential,35.2397017,32.6748917,other,misc,female,50-69,negative,
 2021-07-12 07:59:00,Migdal HaEmek,residential,35.2397017,32.6748917,cigarette,cigarettes,male,50-69,negative,
-2021-07-12 08:21:00,Migdal HaEmek,residential,35.2397017,32.6748917,dog feces,,female,50-69,negative,
 2021-07-12 08:40:00,Migdal HaEmek,residential,35.2397017,32.6748917,cigarette filter,cigarettes,male,30-49,negative,
 2021-07-12 09:00:00,Migdal HaEmek,commercial,35.2397686,32.6755023,paper,biodegradables,female,30-49,positive,
 2021-07-12 09:03:00,Migdal HaEmek,commercial,35.2397686,32.6755023,cigarette filter,cigarettes,male,50-69,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
@@ -306,7 +299,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-21 20:39:00,Ofakim,leisure,34.614823024074305,31.307494310336036,paper,biodegradables,male,05-09,positive,
 2021-07-21 20:40:00,Ofakim,leisure,34.614823024074305,31.307494310336036,bag,wrappers,male,05-09,positive,
 2021-07-21 20:40:00,Ofakim,leisure,34.614823024074305,31.307494310336036,bottle,liquid containers,male,10-19,negative,ילד שהשליך פריט לכלוך
-2021-09-22 16:29:00,Ofakim,residential,34.621424890188834,31.30208784188705,dog feces,,female,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-09-22 16:39:00,Ofakim,residential,34.621424890188834,31.30208784188705,other,misc,female,05-09,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-09-22 16:50:00,Ofakim,residential,34.621424890188834,31.30208784188705,cigarette,cigarettes,male,50-69,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-09-22 17:16:00,Ofakim,residential,34.621424890188834,31.30208784188705,bottle,liquid containers,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -315,7 +307,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-09-22 18:57:00,Ofakim,leisure,34.628870560791505,31.303273361145422,other,misc,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-09-22 19:00:00,Ofakim,leisure,34.628870560791505,31.303273361145422,cup,wrappers,female,05-09,negative,ילד שהשליך פריט לכלוך
 2021-09-22 19:04:00,Ofakim,leisure,34.628870560791505,31.303273361145422,package,wrappers,male,05-09,negative,ילד שהשליך פריט לכלוך
-2021-09-22 20:09:00,Ofakim,leisure,34.628870560791505,31.303273361145422,dog feces,,male,20-29,positive,
 2021-09-22 19:12:00,Ofakim,leisure,34.628870560791505,31.303273361145422,bag,wrappers,male,30-49,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
 2021-09-22 19:14:00,Ofakim,leisure,34.628870560791505,31.303273361145422,package,wrappers,female,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-09-22 19:27:00,Ofakim,leisure,34.628870560791505,31.303273361145422,cigarette,cigarettes,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -362,7 +353,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-13 16:31:00,Kiryat Shmona,commercial,35.6487037,33.2315318,snack,misc,female,05-09,negative,
 2021-07-13 16:31:00,Kiryat Shmona,commercial,35.6487037,33.2315318,box,wrappers,female,05-09,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-07-13 16:37:00,Kiryat Shmona,commercial,35.6487037,33.2315318,snack,misc,female,05-09,negative,
-2021-07-13 17:35:00,Kiryat Shmona,commercial,35.6487037,33.2315318,dog feces,,female,10-19,positive,
 2021-07-13 16:56:00,Kiryat Shmona,commercial,35.6487037,33.2315318,other,misc,female,20-29,positive,
 2021-07-13 16:57:00,Kiryat Shmona,commercial,35.6487037,33.2315318,bag,wrappers,female,10-19,positive,
 2021-07-13 16:57:00,Kiryat Shmona,commercial,35.6487037,33.2315318,bottle,liquid containers,female,20-29,negative,
@@ -495,11 +485,9 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-14 18:28:00,Gilboa,residential,35.2938916,32.5154065,cardboard,biodegradables,female,10-19,positive,
 2021-07-14 18:02:00,Gilboa,residential,35.2938916,32.5154065,paper,biodegradables,male,10-19,positive,
 2021-07-14 18:28:00,Gilboa,residential,35.2938916,32.5154065,mask,misc,female,10-19,positive,
-2021-07-14 18:31:00,Gilboa,residential,35.2938916,32.5154065,dog feces,,female,30-49,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-07-14 18:31:00,Gilboa,residential,35.2938916,32.5154065,cigarette,cigarettes,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-14 19:03:00,Gilboa,residential,35.2938916,32.5154065,bag,wrappers,male,50-69,positive,
 2021-07-14 19:06:00,Gilboa,residential,35.2938916,32.5154065,bag,wrappers,male,30-49,positive,
-2021-07-14 19:15:00,Gilboa,residential,35.2938916,32.5154065,dog feces,,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-14 12:12:00,Gilboa,residential,35.3080624,32.6030152,mask,misc,male,20-29,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-07-14 12:36:00,Gilboa,residential,35.3080624,32.6030152,cigarette,cigarettes,male,20-29,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-07-14 12:53:00,Gilboa,residential,35.3080624,32.6030152,bag,wrappers,female,10-19,positive,
@@ -875,7 +863,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-19 10:58:00,Ashkelon,leisure,34.5876339,31.6712909,cigarette filter,cigarettes,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-07-19 11:07:00,Ashkelon,leisure,34.5876339,31.6712909,other,misc,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-07-19 11:09:00,Ashkelon,leisure,34.5876339,31.6712909,paper,biodegradables,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-07-19 11:11:00,Ashkelon,leisure,34.5876339,31.6712909,dog feces,,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-19 11:50:00,Ashkelon,leisure,34.5686727,31.653105,package,wrappers,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-19 11:55:00,Ashkelon,leisure,34.5686727,31.653105,tincan,liquid containers,male,10-19,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-07-19 12:08:00,Ashkelon,leisure,34.5686727,31.653105,package,wrappers,male,05-09,positive,
@@ -940,7 +927,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-19 13:25:00,Ashkelon,commercial,34.5823667,31.6727075,bottle,liquid containers,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-19 13:35:00,Ashkelon,commercial,34.5823667,31.6727075,cardboard,biodegradables,male,30-49,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-07-19 13:38:00,Ashkelon,commercial,34.5823667,31.6727075,mask,misc,female,30-49,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
-2021-07-19 13:39:00,Ashkelon,commercial,34.5823667,31.6727075,dog feces,,male,20-29,positive,
 2021-07-19 13:49:00,Ashkelon,commercial,34.5823667,31.6727075,package,wrappers,male,10-19,negative,ילד שהשליך פריט לכלוך
 2021-07-19 13:53:00,Ashkelon,commercial,34.5823667,31.6727075,cardboard,biodegradables,male,50-69,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-07-19 13:54:00,Ashkelon,commercial,34.5823667,31.6727075,tincan,liquid containers,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -966,7 +952,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-19 14:40:00,Ashkelon,commercial,34.5585168,31.6660404,package,wrappers,male,50-69,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-07-19 14:42:00,Ashkelon,commercial,34.5585168,31.6660404,cardboard,biodegradables,male,50-69,positive,
 2021-07-19 14:20:00,Ashkelon,residential,34.5601037,31.6506865,bottle,liquid containers,male,20-29,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
-2021-07-19 14:23:00,Ashkelon,residential,34.5601037,31.6506865,dog feces,,male,20-29,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-07-19 14:27:00,Ashkelon,residential,34.5601037,31.6506865,cardboard,biodegradables,male,20-29,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-07-19 14:30:00,Ashkelon,residential,34.5601037,31.6506865,box,wrappers,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-07-19 14:36:00,Ashkelon,residential,34.5677385,31.6512175,bottle,liquid containers,female,10-19,positive,
@@ -985,7 +970,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-19 15:15:00,Ashkelon,commercial,34.5654088,31.6546163,bottle,liquid containers,male,30-49,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-07-19 15:02:00,Ashkelon,residential,34.5848417,31.655959,bag,wrappers,female,30-49,positive,
 2021-07-19 15:12:00,Ashkelon,residential,34.5848417,31.655959,box,wrappers,female,30-49,positive,
-2021-07-19 15:20:00,Ashkelon,residential,34.5848417,31.655959,dog feces,,female,20-29,negative,בעל חיים הוציא את הלכלוך מהפח
 2021-07-19 15:26:00,Ashkelon,residential,34.5848417,31.655959,cup,wrappers,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-19 15:52:00,Ashkelon,residential,34.5848417,31.655959,bottle,liquid containers,male,20-29,positive,
 2021-07-19 15:41:00,Ashkelon,residential,34.5674089,31.6519703,bottle,liquid containers,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
@@ -1076,7 +1060,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-20 14:57:00,Kiryat Yam,commercial,35.0677727,32.8432661,paper,biodegradables,female,50-69,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-20 15:04:00,Kiryat Yam,commercial,35.0677727,32.8432661,cigarette,cigarettes,female,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-20 15:06:00,Kiryat Yam,commercial,35.0677727,32.8432661,mask,misc,male,10-19,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
-2021-07-20 15:10:00,Kiryat Yam,commercial,35.0677727,32.8432661,dog feces,,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-20 15:15:00,Kiryat Yam,commercial,35.0677727,32.8432661,cup,wrappers,female,20-29,positive,
 2021-07-20 17:22:00,Kiryat Yam,residential,35.0677282,32.8424683,box,wrappers,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-07-20 17:56:00,Kiryat Yam,residential,35.0677282,32.8424683,bag,wrappers,female,20-29,positive,
@@ -1249,7 +1232,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-21 19:15:00,Yavneel,residential,35.2923633,32.6053381,bag,wrappers,female,50-69,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-21 19:23:00,Yavneel,residential,35.2923633,32.6053381,other,misc,female,05-09,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-21 19:20:00,Yavneel,residential,35.2923633,32.6053381,bag,wrappers,female,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-07-21 10:43:00,Ashdod,residential,34.6599949,31.7817795,dog feces,,male,20-29,negative,בעל חיים הוציא את הלכלוך מהפח
 2021-07-21 10:50:00,Ashdod,residential,34.6599949,31.7817795,cigarette filter,cigarettes,male,10-19,negative,אדם עמד להיכנס למבנה וזרק את פריט הלכלוך לפני הכניסה למבנה
 2021-07-21 09:20:00,Ashdod,public,34.6380582,31.7905432,bottle,liquid containers,female,30-49,positive,
 2021-07-21 09:21:00,Ashdod,public,34.6380582,31.7905432,cigarette filter,cigarettes,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -1365,7 +1347,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-21 12:53:00,Ashdod,residential,34.6599705,31.7903791,cigarette,cigarettes,male,30-49,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-07-21 13:00:00,Ashdod,residential,34.6599705,31.7903791,package,wrappers,female,05-09,negative,ילד שהשליך פריט לכלוך
 2021-07-21 12:37:00,Ashdod,residential,34.6568637,31.7966131,cigarette filter,cigarettes,male,20-29,positive,
-2021-07-21 12:45:00,Ashdod,residential,34.6568637,31.7966131,dog feces,,male,30-49,positive,
 2021-07-21 13:09:00,Ashdod,residential,34.6568637,31.7966131,mask,misc,female,50-69,positive,
 2021-07-21 13:09:00,Ashdod,residential,34.6568637,31.7966131,bag,wrappers,male,20-29,positive,
 2021-07-21 13:10:00,Ashdod,residential,34.6568637,31.7966131,package,wrappers,male,20-29,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
@@ -1470,7 +1451,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-21 16:36:00,Ashdod,residential,34.6426861,31.7996698,paper,biodegradables,male,10-19,positive,
 2021-07-21 16:25:00,Ashdod,commercial,34.6582828,31.7905813,cigarette,cigarettes,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-07-21 16:54:00,Ashdod,commercial,34.6582828,31.7905813,bottle,liquid containers,male,10-19,positive,
-2021-07-21 16:38:00,Ashdod,residential,34.6412586,31.773167,dog feces,,male,20-29,negative,בעל חיים הוציא את הלכלוך מהפח
 2021-07-21 16:54:00,Ashdod,residential,34.6412586,31.773167,cup,wrappers,female,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-07-21 17:20:00,Ashdod,residential,34.6427486,31.8030167,cigarette filter,cigarettes,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-07-21 17:20:00,Ashdod,residential,34.6427486,31.8030167,bottle,liquid containers,female,20-29,positive,
@@ -1480,7 +1460,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-21 17:18:00,Ashdod,residential,34.6401552,31.7734221,cigarette filter,cigarettes,female,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-21 17:35:00,Ashdod,residential,34.6401552,31.7734221,bottle,liquid containers,male,10-19,positive,
 2021-07-21 17:44:00,Ashdod,residential,34.6401552,31.7734221,other,misc,female,05-09,positive,
-2021-07-21 17:52:00,Ashdod,residential,34.6401552,31.7734221,dog feces,,female,20-29,positive,
 2021-07-21 17:28:00,Ashdod,commercial,34.6421173,31.8031908,bag,wrappers,male,50-69,positive,
 2021-07-21 17:39:00,Ashdod,commercial,34.6421173,31.8031908,cigarette,cigarettes,male,70+,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-21 17:46:00,Ashdod,commercial,34.6421173,31.8031908,cigarette,cigarettes,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
@@ -1496,8 +1475,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-21 18:18:00,Ashdod,residential,34.6556767,31.8064907,bottle,liquid containers,female,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-21 18:19:00,Ashdod,residential,34.6556767,31.8064907,mask,misc,female,10-19,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
 2021-07-21 18:20:00,Ashdod,residential,34.6556767,31.8064907,bag,wrappers,male,50-69,positive,
-2021-07-21 18:22:00,Ashdod,residential,34.6334538,31.7808502,dog feces,,male,10-19,negative,בעל חיים הוציא את הלכלוך מהפח
-2021-07-21 18:33:00,Ashdod,residential,34.6334538,31.7808502,dog feces,,female,50-69,positive,
 2021-07-21 18:34:00,Ashdod,commercial,34.6554455,31.7921379,cigarette,cigarettes,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-07-21 18:41:00,Ashdod,commercial,34.6554455,31.7921379,cigarette,cigarettes,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-07-21 18:41:00,Ashdod,commercial,34.6554455,31.7921379,paper,biodegradables,male,50-69,positive,
@@ -1772,7 +1749,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-07-28 17:03:00,Akko,leisure,35.0759767,32.9369112,cigarette filter,cigarettes,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-07-28 16:43:00,Akko,leisure,35.0839765,32.9341212,package,wrappers,male,05-09,positive,
 2021-07-28 17:24:00,Akko,leisure,35.0839765,32.9341212,package,wrappers,female,30-49,positive,
-2021-07-28 17:47:00,Akko,beach,35.0786531,32.9195442,dog feces,,male,10-19,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-07-28 17:51:00,Akko,beach,35.0786531,32.9195442,bottle,liquid containers,male,10-19,positive,
 2021-07-28 17:55:00,Akko,beach,35.0786531,32.9195442,package,wrappers,male,05-09,positive,
 2021-07-28 14:57:00,Akko,beach,35.0786531,32.9195442,other,misc,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -1873,7 +1849,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-18 09:00:00,Harish,residential,35.0404236,32.4600306,cardboard,biodegradables,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-18 13:12:00,Dimona,industrial,35.0191339,31.0634754,mask,misc,male,10-19,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-08-23 10:40:00,Beer Sheva,residential,34.8046865,31.2717925,cigarette filter,cigarettes,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
-2021-08-23 10:41:00,Beer Sheva,residential,34.8046865,31.2717925,dog feces,,female,10-19,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-08-23 10:46:00,Beer Sheva,residential,34.8046865,31.2717925,package,wrappers,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-23 10:50:00,Beer Sheva,residential,34.8046865,31.2717925,snack,misc,female,10-19,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-08-23 10:52:00,Beer Sheva,residential,34.8046865,31.2717925,mask,misc,female,10-19,positive,
@@ -1992,7 +1967,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-24 17:05:00,Beer Sheva,commercial,34.8116319,31.2559887,other,misc,male,30-49,positive,
 2021-08-24 17:17:00,Beer Sheva,commercial,34.8116319,31.2559887,cigarette,cigarettes,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-24 17:20:00,Beer Sheva,commercial,34.8116319,31.2559887,cardboard,biodegradables,male,30-49,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
-2021-08-24 17:26:00,Beer Sheva,commercial,34.8116319,31.2559887,dog feces,,female,30-49,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
 2021-08-24 17:39:00,Beer Sheva,commercial,34.8116319,31.2559887,other,misc,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-24 17:42:00,Beer Sheva,commercial,34.8116319,31.2559887,mask,misc,male,10-19,positive,
 2021-08-24 17:44:00,Beer Sheva,commercial,34.8116319,31.2559887,cup,wrappers,female,50-69,positive,
@@ -2040,10 +2014,8 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-25 11:32:00,Beer Sheva,leisure,34.7910806,31.2560137,tincan,liquid containers,male,30-49,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-08-25 11:35:00,Beer Sheva,leisure,34.7910806,31.2560137,cigarette filter,cigarettes,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-08-25 11:37:00,Beer Sheva,leisure,34.7910806,31.2560137,cigarette filter,cigarettes,male,30-49,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
-2021-08-25 11:17:00,Beer Sheva,residential,34.7929289,31.2448725,dog feces,,male,30-49,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
 2021-08-25 11:23:00,Beer Sheva,residential,34.7929289,31.2448725,cigarette,cigarettes,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-08-25 11:27:00,Beer Sheva,residential,34.7929289,31.2448725,mask,misc,male,10-19,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
-2021-08-25 11:31:00,Beer Sheva,residential,34.7929289,31.2448725,dog feces,,female,20-29,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
 2021-08-25 11:35:00,Beer Sheva,residential,34.7929289,31.2448725,cup,wrappers,male,30-49,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-08-25 11:37:00,Beer Sheva,residential,34.7929289,31.2448725,cigarette,cigarettes,female,50-69,positive,
 2021-08-25 11:46:00,Beer Sheva,residential,34.7929289,31.2448725,package,wrappers,female,10-19,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
@@ -2069,7 +2041,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-25 15:00:00,Beer Sheva,residential,34.7840418,31.2504108,other,misc,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-08-25 15:04:00,Beer Sheva,residential,34.7840418,31.2504108,mask,misc,female,20-29,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-08-25 15:13:00,Beer Sheva,residential,34.7840418,31.2504108,bag,wrappers,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-08-25 15:20:00,Beer Sheva,residential,34.7840418,31.2504108,dog feces,,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-25 15:27:00,Beer Sheva,residential,34.7840418,31.2504108,other,misc,male,05-09,positive,
 2021-08-25 15:39:00,Beer Sheva,residential,34.7840418,31.2504108,cup,wrappers,male,50-69,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-08-25 15:42:00,Beer Sheva,residential,34.7840418,31.2504108,bag,wrappers,male,30-49,positive,
@@ -2117,7 +2088,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-25 18:54:00,Beer Sheva,leisure,34.7762137,31.2544746,other,misc,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-08-25 18:54:00,Beer Sheva,leisure,34.7762137,31.2544746,bag,wrappers,female,20-29,positive,
 2021-08-25 18:55:00,Beer Sheva,leisure,34.7762137,31.2544746,cigarette filter,cigarettes,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-08-25 18:56:00,Beer Sheva,leisure,34.7762137,31.2544746,dog feces,,female,05-09,negative,ילד שהשליך פריט לכלוך
 2021-08-25 19:02:00,Beer Sheva,residential,34.7801065,31.2669893,bag,wrappers,female,50-69,positive,
 2021-08-25 19:06:00,Beer Sheva,residential,34.7801065,31.2669893,bag,wrappers,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-08-25 19:12:00,Beer Sheva,residential,34.7801065,31.2669893,tincan,liquid containers,male,30-49,positive,
@@ -2242,7 +2212,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-29 18:20:00,Beer Sheva,residential,34.7921216,31.2283798,cup,wrappers,female,20-29,positive,
 2021-08-29 18:24:00,Beer Sheva,residential,34.7921216,31.2283798,bag,wrappers,male,20-29,positive,
 2021-08-29 18:29:00,Beer Sheva,residential,34.7921216,31.2283798,cigarette,cigarettes,male,10-19,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
-2021-08-29 18:31:00,Beer Sheva,residential,34.7921216,31.2283798,dog feces,,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-08-29 17:51:00,Beer Sheva,residential,34.7754596,31.2400348,mask,misc,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-29 17:54:00,Beer Sheva,residential,34.7754596,31.2400348,cigarette filter,cigarettes,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-29 18:00:00,Beer Sheva,residential,34.7754596,31.2400348,bag,wrappers,male,10-19,positive,
@@ -2276,7 +2245,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-31 16:10:00,Beer Sheva,residential,34.7773174,31.2640831,cigarette,cigarettes,female,20-29,positive,
 2021-08-31 16:17:00,Beer Sheva,residential,34.7773174,31.2640831,package,wrappers,male,20-29,positive,
 2021-08-31 16:26:00,Beer Sheva,residential,34.7773174,31.2640831,cigarette filter,cigarettes,male,50-69,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
-2021-08-29 12:45:00,Lod,residential,34.9016218,31.9449498,dog feces,,male,20-29,positive,
 2021-08-29 13:23:00,Lod,residential,34.9016218,31.9449498,package,wrappers,female,05-09,positive,
 2021-08-29 14:22:00,Lod,residential,34.9015112,31.9449212,package,wrappers,female,05-09,positive,
 2021-08-29 16:22:00,Lod,leisure,34.9015352,31.9447647,bottle,liquid containers,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
@@ -2290,19 +2258,15 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-30 15:55:00,Lod,commercial,34.8940344,31.9690213,other,misc,female,50-69,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-30 15:58:00,Lod,commercial,34.8940344,31.9690213,package,wrappers,female,30-49,negative,ילד שהשליך פריט לכלוך
 2021-08-30 16:02:00,Lod,commercial,34.8940344,31.9690213,cup,wrappers,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-08-30 16:26:00,Lod,commercial,34.8940344,31.9690213,dog feces,,male,30-49,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-08-30 16:39:00,Lod,commercial,34.8940344,31.9690213,bag,wrappers,male,10-19,positive,
 2021-08-30 16:41:00,Lod,commercial,34.8940344,31.9690213,snack,misc,male,10-19,negative,ילד שהשליך פריט לכלוך
 2021-08-30 16:42:00,Lod,commercial,34.8940344,31.9690213,tincan,liquid containers,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-30 16:55:00,Lod,commercial,34.8940344,31.9690213,package,wrappers,female,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-30 16:58:00,Lod,commercial,34.8940344,31.9690213,cup,wrappers,female,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-08-30 18:00:00,Lod,residential,34.8886032,31.935125,dog feces,,male,20-29,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
 2021-08-30 18:07:00,Lod,residential,34.8886032,31.935125,bottle,liquid containers,male,05-09,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-30 18:11:00,Lod,residential,34.8886032,31.935125,mask,misc,female,10-19,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-08-30 18:38:00,Lod,residential,34.8886032,31.935125,tincan,liquid containers,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-08-30 18:41:00,Lod,residential,34.8886032,31.935125,dog feces,,male,30-49,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-08-30 18:43:00,Lod,residential,34.8886032,31.935125,bottle,liquid containers,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
-2021-08-30 18:45:00,Lod,residential,34.8886032,31.935125,dog feces,,male,30-49,positive,
 2021-08-30 18:47:00,Lod,residential,34.8886032,31.935125,cup,wrappers,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-08-30 18:50:00,Lod,residential,34.8886032,31.935125,package,wrappers,female,05-09,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-30 18:52:00,Lod,residential,34.8886032,31.935125,package,wrappers,male,05-09,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
@@ -2325,7 +2289,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-08-31 11:51:00,Lod,residential,34.901743,31.9514853,cardboard,biodegradables,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-31 11:55:00,Lod,residential,34.901743,31.9514853,package,wrappers,male,05-09,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-31 12:24:00,Lod,residential,34.901743,31.9514853,cup,wrappers,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-08-31 12:28:00,Lod,residential,34.901743,31.9514853,dog feces,,male,50-69,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-08-31 12:30:00,Lod,residential,34.901743,31.9514853,cup,wrappers,male,30-49,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-08-31 12:38:00,Lod,residential,34.901743,31.9514853,snack,misc,male,10-19,negative,ילד שהשליך פריט לכלוך
 2021-08-31 12:53:00,Lod,residential,34.901743,31.9514853,package,wrappers,male,05-09,negative,ילד שהשליך פריט לכלוך
@@ -2410,7 +2373,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-09-02 11:17:00,Lod,residential,34.8962902,31.9536055,box,wrappers,male,10-19,negative,ילד שהשליך פריט לכלוך
 2021-09-02 11:20:00,Lod,residential,34.8962902,31.9536055,other,misc,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-09-02 11:22:00,Lod,residential,34.8962902,31.9536055,mask,misc,female,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-09-02 11:24:00,Lod,residential,34.8962902,31.9536055,dog feces,,male,50-69,positive,
 2021-09-02 11:25:00,Lod,residential,34.8962902,31.9536055,paper,biodegradables,male,10-19,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-09-02 11:27:00,Lod,residential,34.8962902,31.9536055,package,wrappers,female,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-09-02 11:30:00,Lod,residential,34.8962902,31.9536055,bottle,liquid containers,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -2452,7 +2414,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-09-02 18:02:00,Lod,commercial,34.8954314,31.9525596,bottle,liquid containers,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-09-02 18:04:00,Lod,commercial,34.8954314,31.9525596,cardboard,biodegradables,male,30-49,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-02 18:06:00,Lod,commercial,34.8954314,31.9525596,bag,wrappers,male,20-29,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
-2021-09-02 18:08:00,Lod,commercial,34.8954314,31.9525596,dog feces,,male,30-49,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-09-02 18:10:00,Lod,commercial,34.8954314,31.9525596,paper,biodegradables,female,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-09-02 18:12:00,Lod,commercial,34.8954314,31.9525596,snack,misc,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-09-02 18:14:00,Lod,commercial,34.8954314,31.9525596,paper,biodegradables,male,30-49,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
@@ -2468,8 +2429,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-09-09 10:31:00,Lod,residential,34.8963099,31.9534712,tincan,liquid containers,male,30-49,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-09 10:33:00,Lod,residential,34.8963099,31.9534712,cup,wrappers,female,30-49,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-09 10:34:00,Lod,residential,34.8963099,31.9534712,cup,wrappers,female,10-19,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
-2021-09-09 10:36:00,Lod,residential,34.8963099,31.9534712,dog feces,,female,10-19,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
-2021-09-09 10:38:00,Lod,residential,34.8963099,31.9534712,dog feces,,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-09-09 10:39:00,Lod,residential,34.8963099,31.9534712,bag,wrappers,female,05-09,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-09 10:45:00,Lod,residential,34.8963099,31.9534712,package,wrappers,male,05-09,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-09-09 11:19:00,Lod,residential,34.8900355,31.9462477,cardboard,biodegradables,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -2489,7 +2448,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-09-09 13:44:00,Lod,leisure,34.8962994,31.9534687,paper,biodegradables,male,50-69,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-09-09 13:47:00,Lod,leisure,34.8962994,31.9534687,tincan,liquid containers,male,10-19,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-09 13:49:00,Lod,leisure,34.8962994,31.9534687,mask,misc,female,10-19,negative,ילד שהשליך פריט לכלוך
-2021-09-09 13:51:00,Lod,leisure,34.8962994,31.9534687,dog feces,,male,10-19,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-09-09 13:52:00,Lod,leisure,34.8962994,31.9534687,cup,wrappers,female,20-29,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-09 13:54:00,Lod,leisure,34.8962994,31.9534687,package,wrappers,male,05-09,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-09 13:56:00,Lod,leisure,34.8962994,31.9534687,bottle,liquid containers,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -2513,7 +2471,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-09-09 16:45:00,Lod,residential,34.8920934,31.9466354,bag,wrappers,female,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-09-09 17:25:00,Lod,leisure,34.8962939,31.9534691,bottle,liquid containers,male,10-19,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-09-09 17:39:00,Lod,leisure,34.8962939,31.9534691,package,wrappers,male,05-09,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
-2021-09-09 17:43:00,Lod,leisure,34.8962939,31.9534691,dog feces,,female,30-49,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-09 17:49:00,Lod,leisure,34.8962939,31.9534691,package,wrappers,male,10-19,negative,ילד שהשליך פריט לכלוך
 2021-09-09 17:50:00,Lod,leisure,34.8962939,31.9534691,bottle,liquid containers,male,20-29,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-09-09 17:54:00,Lod,leisure,34.8962939,31.9534691,package,wrappers,male,05-09,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -2883,10 +2840,8 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-04 16:21:00,Jerusalem,leisure,35.2203755,31.7815405,cigarette filter,cigarettes,male,30-49,positive,
 2021-10-04 16:32:00,Jerusalem,leisure,35.2203755,31.7815405,bag,wrappers,male,10-19,positive,
 2021-10-04 16:43:00,Jerusalem,leisure,35.2203755,31.7815405,cigarette filter,cigarettes,female,20-29,positive,
-2021-10-04 16:44:00,Jerusalem,leisure,35.2203755,31.7815405,dog feces,,male,30-49,positive,
 2021-10-04 16:47:00,Jerusalem,leisure,35.2203755,31.7815405,tincan,liquid containers,male,10-19,positive,
 2021-10-04 16:49:00,Jerusalem,leisure,35.2203755,31.7815405,cigarette filter,cigarettes,female,20-29,positive,
-2021-10-04 16:50:00,Jerusalem,leisure,35.2203755,31.7815405,dog feces,,female,50-69,positive,
 2021-10-04 18:28:00,Jerusalem,residential,35.2435428,31.8415251,other,misc,male,05-09,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-10-04 18:29:00,Jerusalem,residential,35.2435428,31.8415251,package,wrappers,female,10-19,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-10-04 18:31:00,Jerusalem,residential,35.2435428,31.8415251,cigarette filter,cigarettes,male,50-69,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
@@ -2976,7 +2931,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-05 13:51:00,Jerusalem,public,35.220672,31.7828221,cigarette filter,cigarettes,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-05 13:52:00,Jerusalem,public,35.220672,31.7828221,cup,wrappers,female,30-49,positive,
 2021-10-05 13:00:00,Jerusalem,residential,35.2306154,31.7792162,cigarette,cigarettes,male,20-29,positive,
-2021-10-05 14:06:00,Jerusalem,residential,35.2185004,31.7827191,dog feces,,female,30-49,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-10-05 14:31:00,Jerusalem,residential,35.2185004,31.7827191,cup,wrappers,female,20-29,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-10-05 14:57:00,Jerusalem,residential,35.2185004,31.7827191,cigarette filter,cigarettes,female,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-05 15:17:00,Jerusalem,residential,35.2185004,31.7827191,mask,misc,male,05-09,negative,ילד שהשליך פריט לכלוך
@@ -3011,7 +2965,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-05 15:29:00,Jerusalem,commercial,35.2196751,31.7797776,cup,wrappers,female,20-29,positive,
 2021-10-05 15:46:00,Jerusalem,residential,35.237013,31.8238362,bag,wrappers,male,10-19,positive,
 2021-10-05 15:48:00,Jerusalem,residential,35.237013,31.8238362,other,misc,male,30-49,positive,
-2021-10-05 16:01:00,Jerusalem,residential,35.237013,31.8238362,dog feces,,male,30-49,positive,
 2021-10-05 16:30:00,Jerusalem,residential,35.237013,31.8238362,cigarette filter,cigarettes,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-05 16:41:00,Jerusalem,residential,35.237013,31.8238362,package,wrappers,male,10-19,positive,
 2021-10-05 16:43:00,Jerusalem,residential,35.237013,31.8238362,other,misc,female,30-49,positive,
@@ -3031,7 +2984,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-05 17:57:00,Jerusalem,residential,35.2114692,31.7884384,other,misc,female,50-69,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-10-05 18:17:00,Jerusalem,residential,35.2114692,31.7884384,package,wrappers,male,50-69,negative,הפח היה מלא
 2021-10-05 18:25:00,Jerusalem,residential,35.2114692,31.7884384,snack,misc,male,20-29,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
-2021-10-05 18:36:00,Jerusalem,residential,35.2114692,31.7884384,dog feces,,female,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-05 18:59:00,Jerusalem,residential,35.2114692,31.7884384,paper,biodegradables,female,30-49,negative,הפח היה מלא
 2021-10-05 18:05:00,Jerusalem,public,35.2498292,31.8197748,bag,wrappers,male,05-09,positive,
 2021-10-05 18:19:00,Jerusalem,public,35.2498292,31.8197748,paper,biodegradables,female,05-09,positive,
@@ -3083,7 +3035,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-06 11:38:00,Jerusalem,commercial,35.217592,31.7891727,cardboard,biodegradables,male,30-49,positive,
 2021-10-06 11:45:00,Jerusalem,commercial,35.217592,31.7891727,cardboard,biodegradables,female,50-69,positive,
 2021-10-06 11:52:00,Jerusalem,commercial,35.217592,31.7891727,bag,wrappers,female,50-69,positive,
-2021-10-06 18:25:00,Jerusalem,residential,35.2132066,31.7858943,dog feces,,male,30-49,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-10-06 18:54:00,Jerusalem,residential,35.2132066,31.7858943,other,misc,female,50-69,negative,הפח היה מלא
 2021-10-06 10:36:00,Jerusalem,residential,35.2173265,31.7826359,other,misc,female,10-19,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-10-06 10:37:00,Jerusalem,residential,35.2173265,31.7826359,bag,wrappers,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
@@ -3133,13 +3084,11 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-06 12:17:00,Jerusalem,leisure,35.2161043,31.7834412,other,misc,female,05-09,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-10-06 12:55:00,Jerusalem,leisure,35.2161043,31.7834412,cigarette filter,cigarettes,male,20-29,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-10-06 13:05:00,Jerusalem,leisure,35.2161043,31.7834412,bag,wrappers,male,05-09,negative,ילד עומד בתור למתקן משחקים והשליך את הפסולת (לא רצה לצאת מהתור)
-2021-10-06 13:13:00,Jerusalem,leisure,35.2161043,31.7834412,dog feces,,male,05-09,negative,אחר (יש לפרט את התיאור המתאים בהערות)
 2021-10-06 13:52:00,Jerusalem,leisure,35.2161043,31.7834412,tincan,liquid containers,female,05-09,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-06 14:11:00,Jerusalem,public,35.2452023,31.8420406,snack,misc,female,10-19,negative,ילד שהשליך פריט לכלוך
 2021-10-06 14:46:00,Jerusalem,public,35.2452023,31.8420406,other,misc,male,05-09,positive,
 2021-10-06 14:46:00,Jerusalem,public,35.2452023,31.8420406,cardboard,biodegradables,male,50-69,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-10-06 14:52:00,Jerusalem,public,35.2452023,31.8420406,other,misc,female,20-29,negative,אחר (יש לפרט את התיאור המתאים בהערות)
-2021-10-06 15:15:00,Jerusalem,public,35.2452023,31.8420406,dog feces,,male,10-19,positive,
 2021-10-06 15:17:00,Jerusalem,public,35.2452023,31.8420406,paper,biodegradables,male,10-19,positive,
 2021-10-06 15:27:00,Jerusalem,public,35.2452023,31.8420406,cigarette filter,cigarettes,male,50-69,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-10-06 15:37:00,Jerusalem,public,35.2452023,31.8420406,other,misc,female,30-49,negative,אחר (יש לפרט את התיאור המתאים בהערות)
@@ -3184,7 +3133,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-06 15:56:00,Jerusalem,commercial,35.2150335,31.7511144,mask,misc,male,30-49,negative,אדם עמד להיכנס למבנה וזרק את פריט הלכלוך לפני הכניסה למבנה
 2021-10-06 15:58:00,Jerusalem,commercial,35.2150335,31.7511144,box,wrappers,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-06 16:09:00,Jerusalem,commercial,35.2150335,31.7511144,bag,wrappers,female,20-29,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
-2021-10-06 16:24:00,Jerusalem,commercial,35.2150335,31.7511144,dog feces,,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-10-06 16:06:00,Jerusalem,residential,35.213206,31.7858704,cigarette filter,cigarettes,female,20-29,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-10-06 16:17:00,Jerusalem,residential,35.213206,31.7858704,tincan,liquid containers,female,70+,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-10-06 16:43:00,Jerusalem,residential,35.213206,31.7858704,cigarette,cigarettes,male,50-69,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
@@ -3195,7 +3143,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-06 16:03:00,Jerusalem,commercial,35.1858492,31.7795514,other,misc,female,20-29,negative,פריט הלכלוך נפל בלי כוונה (כדור פלפל
 2021-10-06 16:09:00,Jerusalem,commercial,35.1858492,31.7795514,snack,misc,male,10-19,negative,ילד שהשליך פריט לכלוך
 2021-10-06 16:16:00,Jerusalem,commercial,35.1858492,31.7795514,package,wrappers,male,05-09,positive,
-2021-10-06 16:34:00,Jerusalem,commercial,35.1858492,31.7795514,dog feces,,female,30-49,positive,
 2021-10-06 14:45:00,Jerusalem,leisure,35.170707,31.7534578,cigarette filter,cigarettes,male,20-29,negative,ילד שהשליך פריט לכלוך
 2021-10-06 15:10:00,Jerusalem,leisure,35.170707,31.7534578,cup,wrappers,male,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-10-06 15:25:00,Jerusalem,leisure,35.170707,31.7534578,bag,wrappers,male,50-69,negative,ילד שהשליך פריט לכלוך
@@ -3347,7 +3294,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-07 17:27:00,Jerusalem,commercial,35.220754,31.7981976,paper,biodegradables,male,50-69,positive,
 2021-10-07 16:25:00,Jerusalem,public,35.2070795,31.78915,bottle,liquid containers,female,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-07 16:36:00,Jerusalem,public,35.2070795,31.78915,cigarette filter,cigarettes,male,20-29,negative,אחר (יש לפרט את התיאור המתאים בהערות)
-2021-10-07 16:54:00,Jerusalem,public,35.2070795,31.78915,dog feces,,female,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-07 17:16:00,Jerusalem,public,35.2070795,31.78915,cardboard,biodegradables,male,30-49,negative,הפח היה מלא
 2021-10-07 16:41:00,Jerusalem,residential,35.2111848,31.7620485,paper,biodegradables,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-07 17:00:00,Jerusalem,residential,35.2111848,31.7620485,other,misc,female,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
@@ -3396,7 +3342,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-08 11:24:00,Jerusalem,residential,34.824509,31.8002032,bag,wrappers,female,30-49,positive,
 2021-10-08 11:25:00,Jerusalem,residential,34.824509,31.8002032,cup,wrappers,female,20-29,positive,
 2021-10-08 13:33:00,Jerusalem,residential,35.2132021,31.7857819,other,misc,female,70+,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
-2021-10-08 13:43:00,Jerusalem,residential,35.2132021,31.7857819,dog feces,,female,30-49,negative,אחר (יש לפרט את התיאור המתאים בהערות)
 2021-10-08 13:59:00,Jerusalem,residential,35.2132021,31.7857819,bag,wrappers,male,05-09,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-10-08 14:11:00,Jerusalem,residential,35.2132021,31.7857819,cardboard,biodegradables,female,20-29,negative,אחר (יש לפרט את התיאור המתאים בהערות)
 2021-10-08 14:25:00,Jerusalem,residential,35.2132021,31.7857819,mask,misc,female,10-19,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
@@ -3426,7 +3371,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-08 14:04:00,Jerusalem,residential,34.8001413,31.7545521,bag,wrappers,male,10-19,positive,
 2021-10-10 09:30:00,Jerusalem,commercial,35.1871504,31.7319357,cigarette filter,cigarettes,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-10 09:35:00,Jerusalem,commercial,35.1871504,31.7319357,bag,wrappers,female,50-69,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
-2021-10-10 10:08:00,Jerusalem,commercial,35.1871504,31.7319357,dog feces,,male,30-49,negative,בעל חיים הוציא את הלכלוך מהפח
 2021-10-10 10:30:00,Jerusalem,commercial,35.1871504,31.7319357,cup,wrappers,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-10 10:32:00,Jerusalem,commercial,35.1871504,31.7319357,snack,misc,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-10-10 10:35:00,Jerusalem,commercial,35.1871504,31.7319357,box,wrappers,male,30-49,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
@@ -3468,7 +3412,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-10 10:29:00,Jerusalem,residential,35.2019666,31.8256569,mask,misc,male,10-19,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-10-10 10:53:00,Jerusalem,residential,35.2019666,31.8256569,other,misc,male,70+,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-10-10 11:06:00,Jerusalem,residential,35.2019666,31.8256569,bag,wrappers,female,50-69,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-10-10 11:19:00,Jerusalem,residential,35.2019666,31.8256569,dog feces,,male,30-49,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-10-10 12:02:00,Jerusalem,leisure,35.2188524,31.7934284,other,misc,male,30-49,positive,
 2021-10-10 12:16:00,Jerusalem,leisure,35.2188524,31.7934284,cardboard,biodegradables,male,30-49,positive,
 2021-10-10 12:21:00,Jerusalem,leisure,35.2188524,31.7934284,package,wrappers,female,10-19,positive,
@@ -3496,7 +3439,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-10 12:00:00,Jerusalem,residential,35.1755045,31.7868762,other,misc,male,10-19,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
 2021-10-10 12:05:00,Jerusalem,residential,35.1755045,31.7868762,cigarette filter,cigarettes,male,50-69,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-10 12:15:00,Jerusalem,residential,35.1755045,31.7868762,cardboard,biodegradables,male,10-19,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
-2021-10-10 12:17:00,Jerusalem,residential,35.213204,31.7858803,dog feces,,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-10 12:58:00,Jerusalem,residential,35.213204,31.7858803,paper,biodegradables,female,20-29,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-10-10 13:22:00,Jerusalem,residential,35.213204,31.7858803,snack,misc,female,05-09,negative,ילד שהשליך פריט לכלוך
 2021-10-10 13:58:00,Jerusalem,residential,35.213204,31.7858803,paper,biodegradables,female,20-29,negative,ילד שהשליך פריט לכלוך
@@ -3536,7 +3478,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-10 16:35:00,Jerusalem,residential,35.213204,31.7858803,cigarette,cigarettes,female,70+,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-10 16:58:00,Jerusalem,residential,35.213204,31.7858803,mask,misc,female,10-19,negative,ילד שנתן פריט לכלוך להורה וההורה השליך את פריט הלכלוך
 2021-10-10 17:12:00,Jerusalem,residential,35.213204,31.7858803,other,misc,female,05-09,negative,ילד שהשליך פריט לכלוך
-2021-10-10 17:33:00,Jerusalem,residential,35.213204,31.7858803,dog feces,,female,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-10 15:46:00,Jerusalem,residential,35.2035217,31.768745,bag,wrappers,male,30-49,positive,
 2021-10-10 15:47:00,Jerusalem,residential,35.2035217,31.768745,bag,wrappers,male,20-29,positive,
 2021-10-10 15:49:00,Jerusalem,residential,35.2035217,31.768745,bag,wrappers,male,30-49,positive,
@@ -3549,7 +3490,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-10 15:53:00,Jerusalem,residential,35.2035217,31.768745,cigarette filter,cigarettes,female,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-10 18:53:00,Jerusalem,residential,35.2132127,31.7858787,other,misc,male,50-69,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-10-10 19:06:00,Jerusalem,residential,35.2132127,31.7858787,cigarette,cigarettes,female,10-19,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
-2021-10-10 15:40:00,Jerusalem,residential,35.1882362,31.7318001,dog feces,,male,20-29,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-10-10 15:42:00,Jerusalem,residential,35.1882362,31.7318001,cigarette filter,cigarettes,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-10 15:59:00,Jerusalem,residential,35.1882362,31.7318001,paper,biodegradables,female,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-10 16:00:00,Jerusalem,residential,35.1882362,31.7318001,cardboard,biodegradables,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
@@ -3595,7 +3535,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-10 17:30:00,Jerusalem,residential,35.1751234,31.7858597,bag,wrappers,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-10-10 17:40:00,Jerusalem,residential,35.1751234,31.7858597,snack,misc,female,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-10 18:00:00,Jerusalem,residential,35.1751234,31.7858597,box,wrappers,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-10-11 08:24:00,Jerusalem,residential,35.2091604,31.7566988,dog feces,,male,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-11 08:25:00,Jerusalem,residential,35.2091604,31.7566988,paper,biodegradables,female,20-29,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
 2021-10-11 08:32:00,Jerusalem,residential,35.2091604,31.7566988,cigarette filter,cigarettes,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-11 08:51:00,Jerusalem,residential,35.2091604,31.7566988,mask,misc,male,30-49,negative,"פריט הלכלוך ""נפל מהיד"" כדרך להסוות את פעולה ההשלכה"
@@ -3663,7 +3602,6 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-11 14:27:00,Jerusalem,leisure,35.2132075,31.7859124,package,wrappers,male,05-09,negative,אנשים שישבו בשטח נקודת המדידה והשאירו אחריהם פריטי לכלוך
 2021-10-11 14:38:00,Jerusalem,leisure,35.2132075,31.7859124,mask,misc,female,10-19,negative,ההשלכה מתרחשת במקומות בהם יש כבר הרבה לכלוך
 2021-10-11 15:02:00,Jerusalem,leisure,35.2132075,31.7859124,bottle,liquid containers,male,05-09,negative,אנשים מחפשים פח ואין פחים (בכלל או בכמות מספקת)
-2021-10-11 15:31:00,Jerusalem,leisure,35.2132075,31.7859124,dog feces,,male,20-29,negative,ההשלכה מתרחשת סביב נקודות ספציפיות באוזר המדידה
 2021-10-11 15:58:00,Jerusalem,leisure,35.2132075,31.7859124,other,misc,female,05-09,negative,ילד שהשליך פריט לכלוך
 2021-10-11 16:21:00,Jerusalem,leisure,35.2132074,31.7858421,package,wrappers,male,05-09,negative,ילד עומד בתור למתקן משחקים והשליך את הפסולת (לא רצה לצאת מהתור)
 2021-10-11 16:46:00,Jerusalem,leisure,35.2132074,31.7858421,package,wrappers,female,05-09,negative,הפח היה מלא
@@ -3685,9 +3623,7 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-11 12:30:00,Jerusalem,public,35.2245275,31.7824099,cigarette filter,cigarettes,female,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-11 12:44:00,Jerusalem,public,35.2245275,31.7824099,bag,wrappers,male,05-09,negative,אחר (יש לפרט את התיאור המתאים בהערות)
 2021-10-11 12:51:00,Jerusalem,public,35.2245275,31.7824099,bottle,liquid containers,male,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-10-11 12:57:00,Jerusalem,public,35.2245275,31.7824099,dog feces,,female,30-49,positive,
 2021-10-11 13:02:00,Jerusalem,public,35.2245275,31.7824099,bottle,liquid containers,male,70+,positive,
-2021-10-11 13:35:00,Jerusalem,public,35.2245275,31.7824099,dog feces,,male,30-49,negative,אחר (יש לפרט את התיאור המתאים בהערות)
 2021-10-11 13:49:00,Jerusalem,public,35.2245275,31.7824099,bag,wrappers,male,05-09,negative,ילד שהשליך פריט לכלוך
 2021-10-11 14:17:00,Jerusalem,public,35.2245275,31.7824099,bag,wrappers,female,30-49,positive,
 2021-10-11 11:05:00,Jerusalem,leisure,35.1845381,31.7874393,cigarette filter,cigarettes,male,10-19,negative,ילד שהשליך פריט לכלוך
@@ -3829,24 +3765,19 @@ incident_time,city,location_type,longitude,latitude,subcategory,category,gender,
 2021-10-18 17:31:00,Sderot,public,34.588438743983026,31.528834611750828,mask,misc,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
 2021-10-18 16:28:00,Sderot,residential,34.5979969,31.5297434,bag,wrappers,male,50-69,positive,
 2021-10-18 16:29:00,Sderot,residential,34.5979969,31.5297434,bag,wrappers,female,50-69,positive,
-2021-10-18 16:37:00,Sderot,residential,34.5979969,31.5297434,dog feces,,male,50-69,positive,
 2021-10-18 16:44:00,Sderot,residential,34.5979969,31.5297434,bag,wrappers,male,50-69,positive,
 2021-10-18 17:11:00,Sderot,residential,34.5979969,31.5297434,bag,wrappers,male,50-69,positive,
-2021-10-18 17:12:00,Sderot,residential,34.5979969,31.5297434,dog feces,,female,70+,positive,
 2021-10-18 17:31:00,Sderot,residential,34.5979969,31.5297434,bag,wrappers,female,30-49,positive,
 2021-10-18 18:51:00,Sderot,leisure,34.5893696,31.5373283,paper,biodegradables,male,10-19,positive,
 2021-10-18 19:00:00,Sderot,leisure,34.5893696,31.5373283,bag,wrappers,female,30-49,positive,
 2021-10-18 19:06:00,Sderot,leisure,34.5893696,31.5373283,cup,wrappers,female,05-09,positive,
 2021-10-18 19:45:00,Sderot,leisure,34.5893696,31.5373283,cup,wrappers,female,20-29,positive,
 2021-10-18 19:47:00,Sderot,leisure,34.5893696,31.5373283,package,wrappers,female,05-09,positive,
-2021-10-18 19:11:00,Sderot,leisure,34.5893696,31.5373283,dog feces,,male,50-69,positive,
 2021-10-18 19:16:00,Sderot,leisure,34.5893696,31.5373283,paper,biodegradables,female,30-49,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
-2021-10-18 19:17:00,Sderot,leisure,34.5893696,31.5373283,dog feces,,female,20-29,positive,
 2021-10-18 19:20:00,Sderot,leisure,34.5893696,31.5373283,package,wrappers,male,10-19,positive,
 2021-10-18 19:31:00,Sderot,leisure,34.5893696,31.5373283,cup,wrappers,female,30-49,positive,
 2021-10-18 19:32:00,Sderot,leisure,34.5893696,31.5373283,box,wrappers,female,20-29,positive,
 2021-10-18 19:34:00,Sderot,leisure,34.5893696,31.5373283,bag,wrappers,female,20-29,positive,
-2021-10-18 19:37:00,Sderot,leisure,34.5893696,31.5373283,dog feces,,male,30-49,positive,
 2021-10-18 19:40:00,Sderot,leisure,34.5893696,31.5373283,cigarette filter,cigarettes,female,20-29,positive,
 2021-10-18 19:43:00,Sderot,leisure,34.5893696,31.5373283,cigarette,cigarettes,female,20-29,positive,
 2021-10-19 17:27:00,Sderot,residential,34.60673879813937,31.529326258644705,cigarette filter,cigarettes,male,20-29,negative,נראה היה שפריט הלכלוך הושלך בכוונה.
