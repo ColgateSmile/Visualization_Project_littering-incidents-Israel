@@ -10,28 +10,50 @@
 <body>
   <div id="container" style="width: 100%; height: 400px;"></div>
   <script>
-    monthFormat = "%B %Y"
-    dayFormat = "%B %e, %Y"
+    var monthFormat = "%B %Y";
+    var dayFormat = "%a, %b %e";
+
+    // Generate an array of dates
+    function generateDateArray(start, end) {
+      for (var arr = [], dt = new Date(start); dt <= end; dt.setDate(dt.getDate() + 1)) {
+        arr.push(new Date(dt));
+      }
+      return arr;
+    }
+
     // Load the data from the CSV file
     d3.csv("clean_dataset.csv").then(function (data) {
       // Parse the dates and sort the data by date
       var parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S");
       data.forEach(function (d) {
         d.date = parseTime(d.incident_time);
+        d.value = 1;  // Add value of 1 for each incident
       });
+      data.sort(function (a, b) { return a.date - b.date; });
+
+      // Generate an array of dates from the minimum to the maximum date in the data
+      var dateArray = generateDateArray(data[0].date, data[data.length - 1].date);
+
+      // For each date in the array, if it's not in the data, add it with a value of 0
+      dateArray.forEach(function (date) {
+        if (!data.some(function (d) { return +d.date === +date; })) {
+          data.push({date: date, value: 0});
+        }
+      });
+
       data.sort(function (a, b) { return a.date - b.date; });
 
       // Group the data by month
       var monthData = d3.nest()
         .key(function (d) { return d3.timeFormat(monthFormat)(d.date); })
-        .rollup(function (v) { return v.length; })
+        .rollup(function (v) { return d3.sum(v, function(d) { return d.value; }); })  // Sum the values
         .entries(data);
 
       // Group the data by both year-month and day
       var dayData = d3.nest()
         .key(function (d) { return d3.timeFormat(monthFormat)(d.date); })
-        .key(function (d) { return d3.timeFormat(dayFormat)(d.date); }) // Adjust key to include the full date
-        .rollup(function (v) { return v.length; })
+        .key(function (d) { return d3.timeFormat(dayFormat)(d.date); })  // Adjust key to include the full date
+        .rollup(function (v) { return d3.sum(v, function(d) { return d.value; }); })  // Sum the values
         .entries(data);
 
       // Convert the data to the format expected by Highcharts

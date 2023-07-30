@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -73,9 +74,10 @@
                         console.error('Invalid latitude or longitude:', incident.latitude, incident.longitude); // Log an error message if the latitude or longitude is invalid
                         continue; // Skip this incident and move on to the next one
                     }
-
+                    var timeFormatted = d3.timeParse("%Y-%m-%d %H:%M:%S")(time);
+                    timeFormatted = d3.timeFormat("%a, %B %e, %Y")(timeFormatted);
                     var marker = L.marker([lat, lng])
-                        .bindPopup('<br><b>Time:</b> ' + time +'<br><b>City:</b> ' + city + '<br><b>Category:</b> ' + category + '<br><b>Notes:</b> ' + notes);
+                        .bindPopup('<br><b>Time:</b> ' + timeFormatted +'<br><b>City:</b> ' + city + '<br><b>Category:</b> ' + category + '<br><b>Notes:</b> ' + notes);
                     markers.addLayer(marker);
                 }
 
