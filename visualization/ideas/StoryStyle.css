@@ -49,51 +49,44 @@
   color: blue;
   background-color: transparent;
   border-color: blue;
-  font-size: 24px; /* Increase the font size to make the button bigger */
-  padding: 15px; /* Increase padding to make the button bigger */
-  width: 45px; /* Increase width to make the button bigger */
-  height: 45px; /* Increase height to make the button bigger */
-  line-height: 45px; /* Center the icon vertically */
-  position: bottom;
+  font-size: 30px; /* Increase the font size to make the button bigger */
+  padding: 20px; /* Increase padding to make the button bigger */
+  width: 60px; /* Increase width to make the button bigger */
+  height: 60px; /* Increase height to make the button bigger */
+  line-height: 60px; /* Center the icon vertically */
   bottom: 30px; /* Adjust the distance from the bottom of the screen */
   transition: all 0.3s ease; /* Add transition effect */
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
 }
 
 /* Custom CSS for carousel control icons */
 .carousel-control-prev-icon {
   /* Adjust the size of the icon */
-  width: 24px; /* Increase the width to make the icon bigger */
-  height: 24px; /* Increase the height to make the icon bigger */
+  width: 48px; /* Increase the width to make the icon bigger */
+  height: 48px; /* Increase the height to make the icon bigger */
   /* Update the SVG path to change the direction of the left arrow */
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l4 4-4 4L1.25 6.5l2.5-2.5L1.25 1.5z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 24 24'%3E%3Cpath d='M19 12H6M12 5l-7 7 7 7'/%3E%3C/svg%3E");
 }
 
 .carousel-control-next-icon {
   /* Adjust the size of the icon */
-  width: 24px; /* Increase the width to make the icon bigger */
-  height: 24px; /* Increase the height to make the icon bigger */
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  width: 48px; /* Increase the width to make the icon bigger */
+  height: 48px; /* Increase the height to make the icon bigger */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h13M12 5l7 7-7 7'/%3E%3C/svg%3E");
 }
 
 /* Custom CSS for carousel control buttons on hover */
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   color: white;
-  background-color: blue;
+  background-color: rgb(62, 62, 131);
   border-color: blue;
 }
 
-/* Custom CSS for carousel control icons */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  /* Adjust the size of the icon */
-  width: 15px;
-  height: 15px;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-
-/* Custom CSS for carousel control icons on hover */
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
