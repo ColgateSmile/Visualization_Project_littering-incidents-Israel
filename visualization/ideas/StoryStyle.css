@@ -1,65 +1,99 @@
 /* Custom CSS for fullscreen iframes */
 .iframe-container {
-    position: relative;
-    width: 100%;
-    padding-top: 75%; /* 4:3 aspect ratio (change as needed) */
-  }
-  
-  .iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Custom CSS for progress indicator */
-  .progress {
-    height: 4px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .progress-bar {
-    background-color: #ffffff;
-  }
-  
-  /* Custom CSS for carousel control buttons */
-  .carousel-control-prev,
-  .carousel-control-next {
-    color: blue;
-    background-color: transparent;
-    border-color: blue;
-    font-size: 16px; /* Adjust the font size to change button size */
-    width: 30px; /* Adjust the width to change button size */
-    height: 30px; /* Adjust the height to change button size */
-    line-height: 30px; /* Center the icon vertically */
-    position: bottom;
-    bottom: 20px; /* Adjust the distance from the bottom of the screen */
-  }
-  
-  /* Custom CSS for carousel control buttons on hover */
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
-    color: white;
-    background-color: blue;
-    border-color: blue;
-  }
-  
-  /* Custom CSS for carousel control icons */
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    /* Adjust the size of the icon */
-    width: 15px;
-    height: 15px;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-  }
-  
-  /* Custom CSS for carousel control icons on hover */
-  .carousel-control-prev:hover .carousel-control-prev-icon,
-  .carousel-control-next:hover .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-  }
-  
+  position: relative;
+  width: 80%; /* Center the visualization by reducing the width */
+  margin: 0 auto; /* Center the visualization */
+  padding-top: 60%; /* Adjust aspect ratio as needed */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom CSS for sections */
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center the text */
+}
+
+/* Custom CSS for section text */
+.section-text {
+  border: 1px solid #ddd; /* Add border */
+  padding: 20px; /* Add padding */
+  margin-top: 20px; /* Add margin to the top */
+}
+
+/* Custom CSS for progress indicator */
+.progress {
+  height: 4px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.progress-bar {
+  background-color: #ffffff;
+}
+
+/* Custom CSS for carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  color: blue;
+  background-color: transparent;
+  border-color: blue;
+  font-size: 24px; /* Increase the font size to make the button bigger */
+  padding: 15px; /* Increase padding to make the button bigger */
+  width: 45px; /* Increase width to make the button bigger */
+  height: 45px; /* Increase height to make the button bigger */
+  line-height: 45px; /* Center the icon vertically */
+  position: bottom;
+  bottom: 30px; /* Adjust the distance from the bottom of the screen */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+
+/* Custom CSS for carousel control icons */
+.carousel-control-prev-icon {
+  /* Adjust the size of the icon */
+  width: 24px; /* Increase the width to make the icon bigger */
+  height: 24px; /* Increase the height to make the icon bigger */
+  /* Update the SVG path to change the direction of the left arrow */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l4 4-4 4L1.25 6.5l2.5-2.5L1.25 1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  /* Adjust the size of the icon */
+  width: 24px; /* Increase the width to make the icon bigger */
+  height: 24px; /* Increase the height to make the icon bigger */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+/* Custom CSS for carousel control buttons on hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: white;
+  background-color: blue;
+  border-color: blue;
+}
+
+/* Custom CSS for carousel control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* Adjust the size of the icon */
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+/* Custom CSS for carousel control icons on hover */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
