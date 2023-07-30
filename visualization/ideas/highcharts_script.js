@@ -133,6 +133,11 @@ const highchartsPyramid = options => {
       yAxis: {
         title: {
           text: null
+        },
+        labels: {
+          formatter: function() {
+            return Math.abs(this.value);
+          }
         }
       },
       legend: {
